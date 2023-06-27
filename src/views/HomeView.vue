@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Carousel></Carousel>
+    <OfficeBranch></OfficeBranch>
+    <MainSection></MainSection>
+    <OurProducts></OurProducts>
+    <Career></Career>
   </div>
 </template>
 
 <script>
+import Career from '../components/Career'
+import OurProducts from '../components/OurProducts'
+import MainSection from '../components/MainSection'
+import OfficeBranch from '../components/OfficeBranch'
+import Carousel from '../components/Carousel'
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    Career,
+    OurProducts,
+    MainSection,
+    OfficeBranch, Carousel },
+
 }
 </script>
+
+
+<style scoped>
+  .home {
+    overflow-x: hidden;
+  }
+</style>
