@@ -1,80 +1,31 @@
 <template>
-    <footer class="footer">
-        <div class="footer-container container">
-            <div class="footer-row row">
-                <div class="footer-col col-lg-3 col-md-6">
-                    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Connect with Us</h3>
-                        <p>Please send us email to query.</p>
-                        <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
-                            <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
-                            <!--<button class="btn btn_get btn_get_two" type="submit">Subscribe</button>-->
-                            <a href="" class="careers_btn btn btn-danger btn_get btn_get_two custom-btn btn-9">Submit</a>
-                            <p class="mchimp-errmessage" style="display: none;"></p>
-                            <p class="mchimp-sucmessage" style="display: none;"></p>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-col col-lg-3 col-md-6">
-                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Resources</h3>
-                        <ul class="list-unstyled f_list">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Global</a></li>
-                            <li><a href="">Products & Services</a></li>
-                            <li><a href="">News</a></li>
-                            <li><a href="">Careers</a></li>
-                            <li><a href="">About Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-col col-lg-3 col-md-6">
-                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
-                        <ul class="list-unstyled f_list">
-                            <li><a href="">Building No.1, Aung Chan Thar Housing Estate, East Shwegonedine Road, Bahan Township,</a></li>
-                            <li><a href="">Yangon, Myanmar.</a></li>
-                            <li><a href="">+(95)-1-546100</a></li>
-                            <li><a href="">info@hitachi-soe.com</a></li>
-                            <li>
-                                <a href=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-col col-lg-3 col-md-6">
-                    <h3 class="f-title f_600 t_color f_size_18">Social Network</h3>
-                    <div class="fusion-text fusion-text-4" id="slider-social-media-icons">
-                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-                            <p>
-                                <a href="" rel="noopener">
-                                    <img class="alignnone size-medium wp-image-8983" src="@/assets/images/facebook.png" alt="">
-                                </a>
-                                &nbsp; &nbsp;
-                                <a href="" rel="noopener">
-                                    <img class="alignnone size-medium wp-image-8968" src="@/assets/images/youtube.png" alt="">
-                                </a>
-                                &nbsp; &nbsp;
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <footer class="footer ">
+        <div class="footer1">
+            <div class="social">
+                <router-link to="#"><img src="@/assets/images/icon_sns_facebook.png" alt=""></router-link>
+                <router-link to="#"><img src="@/assets/images/icon_sns_linkedin.png" alt=""></router-link>
+                <router-link to="#"><img src="@/assets/images/icon_sns_twitter.png" alt=""></router-link>
+                <router-link to="#"><img src="@/assets/images/icon_sns_youtube.png" alt=""></router-link>
+            </div>
+            <div class="link ">
+                <router-link to="#">About Hitachi's Social Media Activities</router-link>
+                <router-link to="#">Sitemap</router-link>
+                <router-link to="#">Contact Information</router-link>
             </div>
         </div>
-        <!--<div class="footer_bg">
-					<div class="footer_bg_one"></div>
-					<div class="footer_bg_two"></div>
-				  </div>-->
-        <div class="footer_bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <p class="mb-0 f_400"><a class="footer-bottom-text" href="" target="_blank">© Hitachi Soe Electric & Machinery </a>2023 All rights reserved and developed by itGateway Technology Group Ltd.</p>
-                    </div>
-                    <!--<div class="col-lg-6 col-sm-5 text-right">
-						<p>Developed by <i class="icon_heart"></i><a class="footer-bottom-text" href="" target="_blank">itGateway Technology Group Ltd.</a></p>
-					  </div>-->
-                </div>
+
+        <div class="global-site">
+            <router-link to="https://www.hitachi.com">Hitachi Global Website</router-link>
+        </div>
+
+        <div class="policy">
+            <div class="copy-right">
+                &copy;&nbsp;Hitachi, Ltd.&nbsp; 1994, &nbsp; 2023. &nbsp; All rights reserved.
+            </div>
+            <div class="access-policy">
+                <router-link to="#">Accessbility Policy</router-link>
+                <router-link to="#">Terms of Use</router-link>
+                <router-link to="#">Privacy Policy</router-link>
             </div>
         </div>
     </footer>
@@ -88,84 +39,155 @@
 
 <style scoped>
 .footer {
-    background-color: rgba(100, 100, 100, .5);
+    background-color: #e5e5e5;
+    padding: 20px 15.5%;
 }
 
-.footer-row {
-    padding-top: 40px;
-    padding-bottom: 20px;
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer-container {
-    position: relative;
-    overflow-x: hidden;
+.footer .social img {
+    width: 7%;
+    margin-right: 15px;
 }
 
-.footer-col {
-    padding-right: 15px;
-    padding-left: 15px;
+.footer .link a {
+    text-decoration: none;
+    font-size: 90%;
+    margin-left: 30px;
+    color: #040404;
 }
 
-.footer_bottom {
-    padding-top: 5px;
-    padding-bottom: 10px;
+.footer .link a:hover {
+    color: #d95369;
+    text-decoration: underline;
 }
 
-.f-title {
-    font-size: 20px;
-    padding-bottom: 10px;
+.global-site {
+    margin: 35px auto 20px;
 }
 
-.f_list li {
-    padding-bottom: 10px;
-}
-
-.f_list li a:hover {
+.global-site a {
+    text-decoration: none;
     color: #000;
-    opacity: 0.7;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.global-site a:hover {
+    text-decoration: underline;
+    color: #d95369;
+}
+
+.policy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.policy .copy-right {
+    font-size: 65%;
+}
+
+.policy .access-policy a{
     text-decoration: none;
+    font-size: 70%;
+    margin-left: 30px;
+    color: #040404;
 }
 
-a {
-    color: #000000;
-    text-decoration: none;
+.policy .access-policy a:hover {
+    text-decoration: underline;
+    color: #d95369;
 }
 
-.f_list li i {
-    padding-right: 5px;
-}
-
-.btn_get {
-    margin-top: 20px;
-    color: #fff;
-}
-
-.footer-bottom-text:hover {
-    color: #000 !important;
-    opacity: 0.7;
-}
-
-.text-right {
-    right: 10%;
-}
-
-img {
-    width: 40px;
-}
-
-@media (max-width:450px) {
+@media (max-width: 1500px) {
     .footer {
-        margin-top: .7rem;
-        background-color: rgba(100, 100, 100, .5);
-        padding: 1rem;
-    }
-    .footer-row h3 {
-        font-size: 1.2rem;
-    }
-    .footer-row a {
-        font-size: .8rem;
-        width: 5rem !important;
-        padding: 3px 0;
+        padding: 20px 10%;
     }
 }
+
+@media (max-width: 990px) {
+    .footer {
+        padding: 20px 2%;
+    }
+
+    .footer1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .footer .social img {
+        width: 12%;
+    }
+
+    .footer .link a{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 30px 5%;
+    }
+
+    .footer1 .social {
+        text-align: center;
+    }
+
+    .footer .social img {
+        width: 9%;
+        margin: 15px 10px 35px;
+    }
+    .footer1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer1 .link {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer1 .link a {
+        margin-left: 0;
+        font-size: 80%;
+    }
+
+    .footer .global-site {
+        border: 1px solid #000;
+        padding: 15px 30px;
+        text-align: center;
+        transition: .5s ease;
+    }
+
+    .footer .global-site:hover {
+        background: #c5c2c2;
+    }
+
+    .footer .global-site:hover a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .policy {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .policy .access-policy a {
+        margin: 1px 8px;
+    }
+
+}
+
 </style>

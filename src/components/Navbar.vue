@@ -6,65 +6,146 @@
 
             
 
-            <div class="mobile-toggle">
+            <div class="mobile-toggle" >
                 <div class="mobile-search">
                     <a class="nav-link nav1-info-container" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><img class="" src="@/assets/images/icon_search.svg" alt="Search"></a>
                 </div>
 
-                <button class="toggler nav-toggler">
+                <button class="x-toggle" v-if="isToggle" @click="isToggle = !isToggle"> 
+                    <i class='bx bx-x' ></i>
+                </button>
+
+                <button class="toggler nav-toggler" v-if="!isToggle" @click="isToggle = !isToggle">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
             <div class=" nav1-contact">
                 <div class="top-item active">
-                    <a class="nav-link nav1-info-container" href="" role="button" data-toggle="dropdown" aria-expanded="false"><img class="earth" src="@/assets/images/icon_earth.png" alt="Region / Language"><span class="language">Region / Language</span></a>
-                    <div class="dropdown-menu" id="LangMenu">
-                        <a class="dropdown-item" href="#">Global(English)</a>
-                        <a class="dropdown-item" href="#">Japan(Japanese)</a>
-                        <a class="dropdown-item" href="#">Global Network</a>
+                    <a class="nav-link nav1-info-container" style="margin-top: 2px;"  role="button"  aria-expanded="false"><img class="earth"  src="@/assets/images/icon_earth.png" alt="Region / Language"><span class="language">Region / Language</span>
+
+                    <div class="languages">
+                        <a href=""><img src="@/assets/images/icon_checkmark.png" alt="">English</a>
+                        <a href="" class="burmese"><img src="@/assets/images/icon_checkmark.png" alt="">Burmese</a>
                     </div>
+                    </a>
+                    
                 </div>
                 <div class="top-item">
                     <a class="nav-link nav1-info-container" href="contact.html"><img class="mail" src="@/assets/images/icon_mail.png" alt="Contact Information"><span>Contact Information</span></a>
                 </div>
-                <div class="top-item">
-                    <a class="nav-link nav1-info-container" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><img class="search" src="@/assets/images/icon_search.svg" alt="Search"><span >Search</span></a>
-                </div>
+                <div class="top-item" @click="isSearch = !isSearch" :class="{'bgg': isSearch}">
+                    <a class="nav-link nav1-info-container" role="button" @click="isSearch = !isSearch" data-toggle="dropdown" aria-expanded="false"><img class="search" src="@/assets/images/icon_search.svg" alt="Search"><span >Search</span></a>
+                </div>               
             </div>
         </div>
     </nav>
+
+
+
+    <div class="search-form " :class="{'show-search': isSearch}" >
+        <div class="close " @click="isSearch = !isSearch"><i class='bx bx-x pointer'></i></div>
+        <input class="search" type="text" placeholder="Search here">
+        <input class="search-btn" type="button" value="Search">
+    </div>
 
     <!-- main nav bar  -->
 
     <nav class="nav2">
         <div class="nav2-wraper">
-            <a class="navbar-brand" href="index.html"><img class="logo-text" src="@/assets/images/favicon.png" height="50" alt="Hitachi, Ltd."> Hitachi Soe Electric & Machinery</a>
+            <a v-if="!isToggle" class="navbar-brand " href="index.html"><img class="logo-text" src="@/assets/images/favicon.png" height="50" alt="Hitachi, Ltd."> Hitachi Soe Electric & Machinery</a>
             
-            <div class="menu-wraper">
-                <router-link to="#">A-Transformer</router-link>
-                <router-link to="#" class="product-services">Products & Services
-                    <div class="dropdown">
-                        <ul>
-                            <li>One</li>
-                            <li>Two</li>
-                            <li>Three</li>
-                        </ul>
+            <div class="menu-wraper" :class="{'mobile-menu-wraper': isToggle, 'opacity-0': isMobile && !isToggle}">
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">A-Transformer</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#" class="product-services">Products & Services
+                        <div class="dropdown">
+                            <ul>
+                                <li>One</li>
+                                <li>Two</li>
+                                <li>Three</li>
+                            </ul>
+                        </div>
+                    </router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">About Us</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">Certificates</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">News</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">Careers</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">Our Clients</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu mobile-language" style="border-top: 1px solid #d3d2d2;" :class="{'menu-animate': isToggle}">
+                    <div class="d-flex align-items-center" style="padding:18px 16px;">
+                        <img class="black-earth" src="@/assets/images/icon_earth.png" alt="">
+                        <img class="white-earth" src="@/assets/images/white-earth.jpg" alt="">
+                        <div  style="font-size: 90%; padding: 3px 0 0 14px;">Region / Language</div>
                     </div>
-                </router-link>
-                <router-link to="#">About Us</router-link>
-                <router-link to="#">Certificates</router-link>
-                <router-link to="#">News</router-link>
-                <router-link to="#">Careers</router-link>
-                <router-link to="#">Our Clients</router-link>
+                    <i class='bx bx-plus mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu mobile-mail" :class="{'menu-animate': isToggle}">
+                    <div class="d-flex align-items-center" style="padding:18px 16px;">
+                        <img class="black-mail" src="@/assets/images/icon_mail.png" alt="">
+                        <img class="white-mail" src="@/assets/images/white-mail.png" alt="">
+                        <div  style="font-size: 90%; padding: 3px 0 0 10px;">Contact Information</div>
+                    </div>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
             </div>
         </div>
     </nav>
 </template>
 
 <script>
+import { onMounted, onUpdated, ref } from 'vue'
     export default {
-        
+        setup() {
+            let isToggle = ref(false);
+            let isMobile = ref(false);
+            let isSearch = ref(false);
+
+            let width = ref(0);
+
+            let updateWidth = () => {
+                width.value = window.innerWidth;
+                if(width.value < 768 ) {
+                    isMobile.value = true;
+                } else {
+                    isMobile.value = false;
+                }
+            }
+
+            onMounted(() => {
+                updateWidth();
+                window.addEventListener('resize', updateWidth)
+
+            })
+
+            onUpdated(() => {
+                updateWidth();
+                window.addEventListener('resize', updateWidth)
+            })
+
+            return {isToggle, isMobile, isSearch}
+        }
     }
 </script>
 
@@ -94,24 +175,25 @@
         list-style: none;
     }
 
-    .mobile-toggle{
+    .mobile-toggle, .mobile-arrow{
         display: none;
     }
 
     .nav1-contact {
         display: flex;
         align-items: center;
-        
+        justify-content: space-between;
     }
 
     .top-item{
-        margin: -11px 0 0 -5px;
+        margin: -11px 0 2px -5px;
         padding-bottom: 5px;
         transition: .3s ease-in-out;
+        height: 44px;
     }
 
     .top-item:hover {
-        background: #c5c5c5;
+        background: #ccc;
     }
 
     .top-item:hover a {
@@ -142,6 +224,96 @@
         color: #000;
     }
 
+    .nav1-info-container {
+        position: relative;
+    }
+
+    .languages {
+       position: absolute;
+       z-index: 9999;
+       right: -37px;
+       top: 100%;
+       margin-top: 2px;
+    }
+
+    .languages a {
+        width: 250px;
+        display: block;
+        background: #c5c5c5;
+        padding: 0px 73px 0px 45px;
+        margin-right: 37px;
+        text-decoration: none;
+        font-size: 13px;
+        height: 0;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+    }
+
+    .nav1-info-container:hover .languages a {
+        height: 45px;
+        padding: 20px 73px 40px 45px;
+        transition: all .3s ease-in-out;
+        opacity: 1;
+    }
+
+    .languages img {
+        width: 15%;
+        margin: 2px 10px 4px -25px;
+    }
+
+    .languages .burmese img {
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    .languages .burmese:hover img{
+        opacity: 1;
+    }
+
+    .search-form {
+        background: #ccc;
+        text-align: center;
+        transition: all .3s ease;
+        opacity:0;
+        height:0;
+        overflow-x: hidden;
+    }
+
+    .show-search {
+        height: 100px;
+        opacity: 1;
+    }
+
+    .close {
+        width: 900px;
+        margin: 0 auto;
+        text-align: right;
+        padding-top: 8px;
+    }
+    .close i {
+        font-size: 32px;
+        color: #818080;
+        margin-bottom: 10px;
+    }
+    .search-form .search {
+        width: 750px;
+        height: 37px;
+        border: none;
+        padding-left: 20px;
+    }
+
+    .search-form .search:focus {
+        outline: none;
+    }
+    .search-form .search-btn {
+        height: 37px;
+        border: none;
+        background: #b1000e;
+        width: 150px;
+        color: #fff;
+        font-size: 14px;
+    }
+
 
     /* ------------ main navbar ----------- */
     .nav2 {
@@ -167,17 +339,25 @@
         font-size: 16px;
     }
 
+    .nav2 .mobile-menu {
+        display: inline-block;
+    }
+
     .nav2 .menu-wraper a{
         text-decoration: none;
         font-size: 13px;
         font-weight: 100;
-        padding: 20px 18px;
+        padding: 20px 16px;
         transition: .2s ease-in-out;
     }
 
     .nav2 .menu-wraper a:hover {
         background: var(--btn-color);
         color: #fff;
+    }
+
+    .nav2 .mobile-language, .nav2 .mobile-mail {
+        display: none;
     }
 
     /* ------dropdown ------------ */
@@ -190,20 +370,34 @@
         transform: translateY(0);
         opacity: 0;
         pointer-events: none;
-        transition: 0.5s;
         z-index: 99;
         background-color: rgba(104, 99, 99, 0.85);
         display: flex;
+        transition: 0.3s ease;
+    }
+
+    .product-services .dropdown ul li {
+        height: 0px;
+        line-height: 0;
+        transition: all .5s ease;
+        opacity: 0;
+    }
+
+    .product-services:hover .dropdown ul li {
+        opacity: 1;
+        height: 30px;
+        line-height: 30px;
     }
 
     .product-services:hover>.dropdown {
         opacity: 1;
+        visibility: visible;
         pointer-events: auto;
     }
 
     
 
-    @media (max-width: 1500px) {
+    @media (min-width: 900px) and (max-width: 1500px) {
         /* --------- top navbar ------- */
         .navbar {
             width: 100%;
@@ -224,6 +418,7 @@
             margin: -12px 0 0 -5px;
             padding-bottom: 5px;
             transition: .3s ease-in-out;
+            height: 40px;
         }
     
         .top-item:hover {
@@ -252,6 +447,41 @@
     
         .nav1 .search {
             width: 22px;
+        }
+        .nav1-info-container:hover .languages a {
+            height: 35px;
+            padding: 15px 73px 30px 45px;
+            transition: all .3s ease-in-out;
+            opacity: 1;
+        }
+
+        .languages {
+            position: absolute;
+            z-index: 9999;
+            right: -37px;
+            top: 100%;
+            margin-top: 0px;
+         }
+
+         .languages a {
+            width: 250px;
+            display: block;
+            background: #c5c5c5;
+            padding: 0px 73px 0px 45px;
+            margin-right: 37px;
+            text-decoration: none;
+            font-size: 13px;
+            height: 0;
+            transition: all .3s ease-in-out;
+            opacity: 0;
+            margin-bottom: -3px;
+        }
+    
+        .nav1-info-container:hover .languages a {
+            height: 45px;
+            padding: 20px 73px 40px 45px;
+            transition: all .3s ease-in-out;
+            opacity: 1;
         }
 
         /* --------main navbar----- */
@@ -290,6 +520,32 @@
             padding: 0 1%;
         }
 
+        .languages {
+            margin-top: 4px;
+         }
+
+        .languages a {
+            width: 250px;
+            display: block;
+            background: #c5c5c5;
+            padding: 0px 73px -5px 45px;
+            margin-right: 37px;
+            margin-bottom: -3px;
+            text-decoration: none;
+            font-size: 13px;
+            height: 0;
+            transition: all .3s ease-in-out;
+            opacity: 0;
+        }
+
+        .nav1-info-container:hover .languages a {
+            height: 33px;
+            padding: 15px 73px 40px 45px;
+            transition: all .3s ease-in-out;
+            transform: translateY(-4px);
+            opacity: 1;
+        }
+
 
         /* --------- main navbar------ */
         .nav2-wraper {
@@ -304,10 +560,68 @@
             max-height: 44px;
         }
 
+        .nav1 .navbar-brand {
+            margin-top: -8px;
+            margin-bottom: 8px;
+        }
+
         .top-item{
-            margin: -10px 0 0 -5px;
+            margin: -12px 0 0 -5px;
             padding: 4px 0 7px;
             transition: .3s ease-in-out;
+        }
+
+        .languages {
+            position: absolute;
+            z-index: 9999;
+            right: -37px;
+            top: 100%;
+            margin-top: 0px;
+         }
+
+        .languages a {
+            width: 250px;
+            display: block;
+            background: #c5c5c5;
+            padding: 0px 73px -5px 45px;
+            margin-right: 37px;
+            margin-bottom: -3px;
+            text-decoration: none;
+            font-size: 13px;
+            height: 0;
+            transition: all .3s ease-in-out;
+            opacity: 0;
+        }
+
+        .nav1-info-container:hover .languages a {
+            height: 33px;
+            padding: 18px 73px 45px 45px;
+            transition: all .3s ease-in-out;
+            transform: translateY(-3px);
+            opacity: 1;
+        }
+
+        .show-search {
+            height: 100px;
+            opacity: 1;
+        }
+    
+        .close {
+            width: 650px;
+            margin: 0 auto;
+            text-align: right;
+            padding-top: 8px;
+        }
+        .close i {
+            font-size: 32px;
+            color: #818080;
+            margin-bottom: 10px;
+        }
+        .search-form .search {
+            width: 500px;
+            height: 37px;
+            border: none;
+            padding-left: 20px;
         }
 
 
@@ -323,11 +637,17 @@
             gap: 1.5rem;
         }
 
+        .mobile-menu {
+            margin-top: 10px;
+            padding-bottom: 13px;
+        }
+
         .menu-wraper {
             display: flex;
             flex-wrap: wrap;
             padding-bottom: -2px;
         }
+
     }
 
     @media (max-width: 768px) {
@@ -338,6 +658,10 @@
         }
         .nav1 .nav1-contact{
             display: none;
+        }
+
+        .nav1 .navbar-brand {
+            margin-top: 0px;
         }
 
         .nav1-wraper {
@@ -382,6 +706,7 @@
             background-color: #ff0026;
             padding: 10px 10px ;
             border: none;
+            margin-bottom: 3px;
         }
 
         .nav-toggler i {
@@ -389,17 +714,132 @@
             font-size: 24px;
         }
 
+        .nav1 .x-toggle {
+            display: inline-block;
+            width:45px;
+            height: 45px;
+            background-color: var(--btn-color);
+            border: none;
+            margin-bottom: 3px;
+
+        }
+
+        .x-toggle i {
+            color: #fff;
+            font-size: 40px;
+        }
+
 
         /* ----- main navbar------ */
-        .menu-wraper {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: -2px;
+        .nav2 {
+            padding: 0;
         }
+
+        .nav2 .navbar-brand {
+            margin-left: 18px;
+        }
+
+        .nav2-wraper {
+            padding: 0;
+        }
+
+        .menu-wraper {
+            display: inline-block;
+            position: absolute;
+            background: #f2f2f2;
+            z-index: 9999;
+            top: 100%;
+            opacity:0;
+            transition: all .5s ease;
+        }
+
+        .mobile-menu-wraper {
+            opacity:1;
+            margin-top: -2px;
+        }
+
+        .nav2 .mobile-menu {
+            display: flex !important;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 0px;
+            padding: 3px 0px;
+            margin: 0;
+            opacity: 0;
+            height: 0;
+            line-height: 0;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-wraper .menu-animate {
+            transition: all .3s ease-in-out;
+            transition-delay: .08s;
+            opacity: 1;
+            height: 56px;
+            line-height: 16px;
+        }
+      
 
         .nav2 .menu-wraper a {
             font-size: 90%;
         }
+
+        .mobile-menu:hover {
+            background-color: var(--btn-color)
+        }
+
+        .mobile-menu:hover a, .mobile-menu:hover .mobile-arrow, .mobile-menu:hover div{
+            color: #fff;
+        }
+
+        .mobile-arrow {
+            display: block;
+            font-size: 35px;
+            font-weight: 200;
+            color: #777;
+            padding-right: 10px;
+        }
+
+        .mobile-menu a {
+            display: block;
+            width: 100%;
+        }
+
+        .menu-wraper img {
+            width: 7%;
+        }
+
+        .menu-wraper .white-earth {
+            width: 9%;
+            display:none;
+        }
+
+        .menu-wraper .mobile-mail .black-mail {
+            width: 9%;
+        }
+
+        .mobile-mail .white-mail {
+            width: 12%;
+            display: none;
+        }
+
+        .mobile-menu:hover .black-earth {
+            display: none;
+        }
+        .mobile-menu:hover .white-earth {
+            display: inline-block;
+        }
+
+        .mobile-menu:hover .black-mail {
+            display: none;
+        }
+        .mobile-menu:hover .white-mail {
+            display: inline-block;
+        }
+
+        /* dropdown effect */
+  
+
     }
 
 </style>
