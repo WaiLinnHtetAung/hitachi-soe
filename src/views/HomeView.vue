@@ -2,6 +2,7 @@
   <div class="home">
     <Carousel></Carousel>
     <OfficeBranch></OfficeBranch>
+    <!-- <ThreeSixtyView></ThreeSixtyView> -->
     <MainSection></MainSection>
     <OurProducts></OurProducts>
     <Career></Career>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import ThreeSixtyView from '../components/ThreeSixtyView'
 import Career from '../components/Career'
 import OurProducts from '../components/OurProducts'
 import MainSection from '../components/MainSection'
@@ -18,6 +20,7 @@ import Carousel from '../components/Carousel'
 
 export default {
   components: {
+    ThreeSixtyView,
     Career,
     OurProducts,
     MainSection,

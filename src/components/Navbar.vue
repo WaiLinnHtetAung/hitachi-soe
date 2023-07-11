@@ -7,8 +7,10 @@
             
 
             <div class="mobile-toggle" >
-                <div class="mobile-search">
-                    <a class="nav-link nav1-info-container" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><img class="" src="@/assets/images/icon_search.svg" alt="Search"></a>
+                <div class="mobile-search" :class="{'search-bg': showMobileSearch}" >
+                    <a @click="showMobileSearch = !showMobileSearch" class="nav-link nav1-info-container" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><img class="" src="@/assets/images/icon_search.svg" alt="Search">
+                    </a>
+                    
                 </div>
 
                 <button class="x-toggle" v-if="isToggle" @click="isToggle = !isToggle"> 
@@ -39,6 +41,13 @@
                 </div>               
             </div>
         </div>
+        <div class="mobile-search-bar" :class="{'mobile-search-bar-toggle': showMobileSearch}">
+            <div class="mb-close " @click="showMobileSearch = ! showMobileSearch"><i class='bx bx-x pointer'></i></div>
+            <div class="input-group">
+                <input class="mb-search form-control" type="text" placeholder="Search here">
+                <span class="input-group-text">Search</span>
+            </div>
+        </div>
     </nav>
 
 
@@ -53,7 +62,7 @@
 
     <nav class="nav2">
         <div class="nav2-wraper">
-            <a v-if="!isToggle" class="navbar-brand " href="index.html"><img class="logo-text" src="@/assets/images/favicon.png" height="50" alt="Hitachi, Ltd."> Hitachi Soe Electric & Machinery</a>
+            <a v-if="!isToggle" class="navbar-brand " href="/"><img class="logo-text" src="@/assets/images/favicon.png" height="50" alt="Hitachi, Ltd."> Hitachi Soe Electric & Machinery</a>
             
             <div class="menu-wraper" :class="{'mobile-menu-wraper': isToggle, 'opacity-0': isMobile && !isToggle}">
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
@@ -78,7 +87,7 @@
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
-                    <router-link to="#">Certificates</router-link>
+                    <router-link to="/certificates">Awards & Certificates</router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
@@ -93,14 +102,31 @@
                     <router-link to="#">Our Clients</router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
-                <div class="mobile-menu mobile-language" style="border-top: 1px solid #d3d2d2;" :class="{'menu-animate': isToggle}">
+                <div class="mobile-menu mobile-language" style="border-top: 1px solid #d3d2d2;" :class="{'menu-animate ': isToggle, 'mb-language-open': showMobileLanguage}">
                     <div class="d-flex align-items-center" style="padding:18px 16px;">
-                        <img class="black-earth" src="@/assets/images/icon_earth.png" alt="">
-                        <img class="white-earth" src="@/assets/images/white-earth.jpg" alt="">
+                        <img class="black-earth" :class="{'d-none': showMobileLanguage}" src="@/assets/images/icon_earth.png" alt="">
+                        <img class="white-earth" :class="{'d-inline-block': showMobileLanguage}" src="@/assets/images/white-earth.jpg" alt="">
                         <div  style="font-size: 90%; padding: 3px 0 0 14px;">Region / Language</div>
                     </div>
-                    <i class='bx bx-plus mobile-arrow'></i>
+                    <i class='bx bx-plus mobile-arrow pointer' @click="showMobileLanguage = !showMobileLanguage" v-if="!showMobileLanguage"></i>
+                    <i class="bx bx-minus text-white mobile-arrow pointer" @click="showMobileLanguage = !showMobileLanguage" v-if="showMobileLanguage"></i>
                 </div>
+
+                <div class=" mb-language" :class="{'mb-language-show': showMobileLanguage}">
+                    <div class="d-flex align-items-center" style="padding:18px 16px;">
+                        <img class="margin-img" src="@/assets/images/icon_checkmark.png" alt="">
+                        <div  style="font-size: 90%; padding: 3px 0 0 14px;"><img src="@/assets/images/icon_checkmark.png" :class="{'no-choose-language': !isEnglish}" alt="">&nbsp;&nbsp;English</div>
+                    </div>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class=" mb-language" :class="{'mb-language-show': showMobileLanguage}">
+                    <div class="d-flex align-items-center" style="padding:18px 16px;">
+                        <img class="margin-img" src="@/assets/images/icon_checkmark.png" alt="">
+                        <div  style="font-size: 90%; padding: 3px 0 0 14px;"><img src="@/assets/images/icon_checkmark.png" :class="{'no-choose-language': isEnglish}" alt="">&nbsp;&nbsp;Burmese</div>
+                    </div>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+              
                 <div class="mobile-menu mobile-mail" :class="{'menu-animate': isToggle}">
                     <div class="d-flex align-items-center" style="padding:18px 16px;">
                         <img class="black-mail" src="@/assets/images/icon_mail.png" alt="">
@@ -121,6 +147,9 @@ import { onMounted, onUpdated, ref } from 'vue'
             let isToggle = ref(false);
             let isMobile = ref(false);
             let isSearch = ref(false);
+            let showMobileSearch = ref(false);
+            let isEnglish = ref(true);
+            let showMobileLanguage = ref(false);
 
             let width = ref(0);
 
@@ -133,6 +162,7 @@ import { onMounted, onUpdated, ref } from 'vue'
                 }
             }
 
+
             onMounted(() => {
                 updateWidth();
                 window.addEventListener('resize', updateWidth)
@@ -144,7 +174,7 @@ import { onMounted, onUpdated, ref } from 'vue'
                 window.addEventListener('resize', updateWidth)
             })
 
-            return {isToggle, isMobile, isSearch}
+            return {isToggle, isMobile, isSearch, showMobileSearch, isEnglish, showMobileLanguage}
         }
     }
 </script>
@@ -219,6 +249,9 @@ import { onMounted, onUpdated, ref } from 'vue'
     .nav1 .search {
         width: 30px;
     }
+    .mobile-search-bar {
+        display: none;
+    }
 
     a {
         color: #000;
@@ -247,6 +280,7 @@ import { onMounted, onUpdated, ref } from 'vue'
         height: 0;
         transition: all .3s ease-in-out;
         opacity: 0;
+        visibility: hidden;
     }
 
     .nav1-info-container:hover .languages a {
@@ -254,6 +288,7 @@ import { onMounted, onUpdated, ref } from 'vue'
         padding: 20px 73px 40px 45px;
         transition: all .3s ease-in-out;
         opacity: 1;
+        visibility: visible;
     }
 
     .languages img {
@@ -343,11 +378,15 @@ import { onMounted, onUpdated, ref } from 'vue'
         display: inline-block;
     }
 
+    .mb-language {
+        display: none;
+    }
+
     .nav2 .menu-wraper a{
         text-decoration: none;
         font-size: 13px;
         font-weight: 100;
-        padding: 20px 16px;
+        padding: 20px 16px  18px;
         transition: .2s ease-in-out;
     }
 
@@ -401,12 +440,16 @@ import { onMounted, onUpdated, ref } from 'vue'
         /* --------- top navbar ------- */
         .navbar {
             width: 100%;
-            max-height: 35px;
+            max-height: 38px;
         }
 
         .nav1 .navbar-brand {
             margin-top: -8px;
 
+        }
+
+        .nav1-wraper {
+            padding: 5px 13% ;
         }
         
         .navbar-brand img {
@@ -415,7 +458,7 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         .top-item{
-            margin: -12px 0 0 -5px;
+            margin: -15px 0 0 -5px;
             padding-bottom: 5px;
             transition: .3s ease-in-out;
             height: 40px;
@@ -448,19 +491,16 @@ import { onMounted, onUpdated, ref } from 'vue'
         .nav1 .search {
             width: 22px;
         }
-        .nav1-info-container:hover .languages a {
-            height: 35px;
-            padding: 15px 73px 30px 45px;
-            transition: all .3s ease-in-out;
-            opacity: 1;
-        }
+      
 
         .languages {
             position: absolute;
-            z-index: 9999;
+            z-index: 99999;
             right: -37px;
             top: 100%;
             margin-top: 0px;
+            transform: translateY(1px);
+
          }
 
          .languages a {
@@ -475,13 +515,16 @@ import { onMounted, onUpdated, ref } from 'vue'
             transition: all .3s ease-in-out;
             opacity: 0;
             margin-bottom: -3px;
+            visibility: hidden;
         }
+
     
         .nav1-info-container:hover .languages a {
-            height: 45px;
-            padding: 20px 73px 40px 45px;
+            height: 35px;
+            padding: 15px 73px 30px 45px;
             transition: all .3s ease-in-out;
             opacity: 1;
+            visibility: visible;
         }
 
         /* --------main navbar----- */
@@ -490,7 +533,7 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         .nav2-wraper {
-            padding: 5px 15.5% ;
+            padding: 4px 13% 0px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -508,7 +551,7 @@ import { onMounted, onUpdated, ref } from 'vue'
             text-decoration: none;
             font-size: 12px;
             font-weight: 100;
-            padding: 15px 15px;
+            padding: 13px 15px;
             transition: .2s ease-in-out;
         }
     }
@@ -516,6 +559,9 @@ import { onMounted, onUpdated, ref } from 'vue'
 
     @media (max-width: 1260px) {
         /* ------top navbar ---------- */
+        .nav1 {
+            z-index: 1;
+        }
         .nav1-wraper {
             padding: 0 1%;
         }
@@ -563,6 +609,11 @@ import { onMounted, onUpdated, ref } from 'vue'
         .nav1 .navbar-brand {
             margin-top: -8px;
             margin-bottom: 8px;
+        }
+
+        .mobile-search-bar {
+            visibility: hidden;
+            opacity: 0;
         }
 
         .top-item{
@@ -638,8 +689,8 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         .mobile-menu {
-            margin-top: 10px;
-            padding-bottom: 13px;
+            margin-top: 7px;
+            padding-bottom: 16px;
         }
 
         .menu-wraper {
@@ -650,7 +701,7 @@ import { onMounted, onUpdated, ref } from 'vue'
 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 765px) {
 
         /* top navbar */
         .nav1 {
@@ -680,6 +731,7 @@ import { onMounted, onUpdated, ref } from 'vue'
             width:50px;
             height: 45px;
             padding: 8px 10px;
+            margin-bottom: 3px;
             position: relative;
             transition: .3s ease-in-out;
         }
@@ -715,7 +767,9 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         .nav1 .x-toggle {
-            display: inline-block;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             width:45px;
             height: 45px;
             background-color: var(--btn-color);
@@ -727,6 +781,58 @@ import { onMounted, onUpdated, ref } from 'vue'
         .x-toggle i {
             color: #fff;
             font-size: 40px;
+        }
+
+        .mobile-search-bar {
+            display: block;
+            background: #ccc;
+            position: absolute;
+            top:100%;
+            right:0;
+            width:100%;
+            z-index: 999999;
+            height: 0;
+            margin-bottom: 20px;
+            padding: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+
+        }
+
+        .mobile-search-bar-toggle {
+            height: 93px;
+            padding: 0px 4% ;
+            visibility: visible;
+            opacity: 1;
+            transition: all .3s ease-in-out;
+        }
+
+        .mobile-search-bar .input-group {
+            margin: 0 auto;
+        }
+
+        .mobile-search-bar .mb-close {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .mobile-search-bar .mb-close i {
+            font-size: 30px;
+            color: #807c7c;
+        }
+
+        .mobile-search-bar .input-group .mb-search:focus {
+            outline: none;
+        }
+
+        .mobile-search-bar .input-group-text{
+            background-color: #b1000e !important;
+            color: #fff;
+        }
+
+        .search-bg {
+            background-color: #ccc;
         }
 
 
@@ -744,17 +850,18 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         .menu-wraper {
-            display: inline-block;
             position: absolute;
             background: #f2f2f2;
             z-index: 9999;
             top: 100%;
             opacity:0;
+            visibility:hidden;
             transition: all .5s ease;
         }
 
         .mobile-menu-wraper {
             opacity:1;
+            visibility: visible;
             margin-top: -2px;
         }
 
@@ -782,6 +889,11 @@ import { onMounted, onUpdated, ref } from 'vue'
 
         .nav2 .menu-wraper a {
             font-size: 90%;
+        }
+
+        .nav2 .menu-wraper a:hover {
+            background: none;
+            color: #fff;
         }
 
         .mobile-menu:hover {
@@ -838,6 +950,50 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         /* dropdown effect */
+
+        /* mobile language */
+        .mb-language {
+            display: flex !important;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            transition: all .3s ease-in-out;
+            transition-delay: .08s;
+            opacity: 0;
+            height: 0;
+            line-height: 0;
+            transition: all .5s ease-in-out;
+            background: #ccc;
+            transition: all .3s ease-in-out;
+        }
+
+        .mb-language-show {
+            opacity: 1;
+            height: 56px;
+            line-height: 16px;
+            padding: 3px 0px;
+            transition: all .3s ease-in-out;
+        }
+
+        .mb-language .margin-img {
+            width: 20%;
+            opacity:0;
+        }
+
+        .mb-language div img {
+            width: 20%;
+        }
+
+        .mb-language .no-choose-language {
+            opacity:0;
+        }
+
+        .mb-language-open {
+            background: #b1000e;
+            color: #fff;
+        }
   
 
     }

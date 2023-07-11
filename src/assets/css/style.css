@@ -5,3 +5,9 @@
 .bgg {
     background-color: #ccc;
 }
+
+#carouselExampleFade,
+.carousel-inner,
+.carousel-item img {
+    z-index: -1 !important;
+}
