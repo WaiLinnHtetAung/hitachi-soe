@@ -7,9 +7,13 @@
         "build": "vue-cli-service build"
     },
     "dependencies": {
+        "@egjs/vue3-view360": "^3.0.4",
         "@vue/compat": "^3.3.4",
-        "core-js": "^3.8.3",
+        "aos": "^3.0.0-beta.6",
+        "core-js": "^3.31.1",
+        "swiper": "^10.0.4",
         "three": "^0.154.0",
+        "uuid": "^9.0.0",
         "vue": "^3.3.4",
         "vue-product-spinner": "^0.2.0",
         "vue-router": "^4.0.3",

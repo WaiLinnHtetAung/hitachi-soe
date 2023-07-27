@@ -23,6 +23,54 @@ const routes = [{
         name: '9001',
         component: () =>
             import ('@/views/certificates/9001.vue')
+    },
+    {
+        path: '/products/offload',
+        name: 'OffLoad',
+        component: () =>
+            import ('@/views/Transformer/OffLoad.vue')
+    },
+    {
+        path: '/products/onload',
+        name: 'OnLoad',
+        component: () =>
+            import ('@/views/Transformer/OnLoad.vue')
+    },
+    {
+        path: '/products/poweroffload',
+        name: 'PowerOffLoad',
+        component: () =>
+            import ('@/views/Transformer/PowerOff.vue')
+    },
+    {
+        path: '/products/poweronload',
+        name: 'PowerOnLoad',
+        component: () =>
+            import ('@/views/Transformer/PowerOn.vue')
+    },
+    {
+        path: '/products/panels/main-distribution-panel',
+        name: "MainDistributionPanel",
+        component: () =>
+            import ('@/views/Panel/MainDistributionPanel.vue')
+    },
+    {
+        path: '/products/panels/acb',
+        name: 'ACB',
+        component: () =>
+            import ('@/views/Panel/ACB.vue')
+    },
+    {
+        path: '/products/panels/package-substation',
+        name: "PackageSubstation",
+        component: () =>
+            import ('@/views/Panel/PackageSubstation.vue')
+    },
+    {
+        path: '/products/panels/vcb',
+        name: 'VCB',
+        component: () =>
+            import ('@/views/Panel/VCB.vue')
     }
 
 ]

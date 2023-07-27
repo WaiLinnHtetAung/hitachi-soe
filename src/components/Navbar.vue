@@ -24,7 +24,7 @@
 
             <div class=" nav1-contact">
                 <div class="top-item active">
-                    <a class="nav-link nav1-info-container" style="margin-top: 2px;"  role="button"  aria-expanded="false"><img class="earth"  src="@/assets/images/icon_earth.png" alt="Region / Language"><span class="language">Region / Language</span>
+                    <a class="nav-link nav1-info-container nav1-language" style="margin-top: 2px;"  role="button"  aria-expanded="false"><img class="earth"  src="@/assets/images/icon_earth.png" alt="Region / Language"><span class="language">Region / Language</span>
 
                     <div class="languages">
                         <a href=""><img src="@/assets/images/icon_checkmark.png" alt="">English</a>
@@ -65,29 +65,43 @@
             <a v-if="!isToggle" class="navbar-brand " href="/"><img class="logo-text" src="@/assets/images/favicon.png" height="50" alt="Hitachi, Ltd."> Hitachi Soe Electric & Machinery</a>
             
             <div class="menu-wraper" :class="{'mobile-menu-wraper': isToggle, 'opacity-0': isMobile && !isToggle}">
+                
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
-                    <router-link to="#">A-Transformer</router-link>
-                    <i class='bx bx-chevron-right mobile-arrow'></i>
-                </div>
-                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
-                    <router-link to="#" class="product-services">Products & Services
+                    <router-link to="#" class="product-services" :class="{'route-active': currentRoute.substring(0,9) === '/products'}">Products & Services
                         <div class="dropdown">
-                            <ul>
-                                <li>One</li>
-                                <li>Two</li>
-                                <li>Three</li>
-                            </ul>
+                            <div class="transformer product">
+                                <ul>
+                                    <li class="mb-2 header">TRANSFORMERS</li>
+                                    <li><router-link to="/products/offload">Distribution Off Load</router-link></li>
+                                    <li><router-link to="/products/onload">Distribution On Load</router-link></li>
+                                    <li><router-link to="/products/powerOffLoad">Power Off Load</router-link></li>
+                                    <li><router-link to="/products/powerOnLoad">Power On Load</router-link></li>
+                                </ul>
+                            </div>
+                            <div class="panel product">
+                                <ul>
+                                    <li class="mb-2 header">PANELS</li>
+                                    <li><router-link to="/products/panels/main-distribution-panel">Main Distribution Panel</router-link></li>
+                                    <li><router-link to="/products/panels/acb">ACB</router-link></li>
+                                    <li><router-link to="/products/panels/package-substation">Package Substation</router-link></li>
+                                    <li><router-link to="/products/panels/vcb">VCB</router-link></li>
+                                </ul>
+                            </div>
                         </div>
                     </router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
 
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
+                    <router-link to="#">A-Transformer {{currentRoute ? currentRoute.substring(0,9) : ''}}</router-link>
+                    <i class='bx bx-chevron-right mobile-arrow'></i>
+                </div>
+                <div class="mobile-menu" :class="{'menu-animate': isToggle}">
                     <router-link to="#">About Us</router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
-                    <router-link to="/certificates">Awards & Certificates</router-link>
+                    <router-link to="/certificates" :class="{'route-active': currentRoute === '/certificates'}">Awards & Certificates</router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
@@ -95,11 +109,11 @@
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
-                    <router-link to="#">Careers</router-link>
+                    <router-link to="#">Our Clients</router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu" :class="{'menu-animate': isToggle}">
-                    <router-link to="#">Our Clients</router-link>
+                    <router-link to="#">Careers</router-link>
                     <i class='bx bx-chevron-right mobile-arrow'></i>
                 </div>
                 <div class="mobile-menu mobile-language" style="border-top: 1px solid #d3d2d2;" :class="{'menu-animate ': isToggle, 'mb-language-open': showMobileLanguage}">
@@ -141,15 +155,18 @@
 </template>
 
 <script>
-import { onMounted, onUpdated, ref } from 'vue'
+    import { onMounted, onUpdated, ref } from 'vue'
+    import { useRouter } from 'vue-router';
     export default {
         setup() {
+            let router = useRouter();
             let isToggle = ref(false);
             let isMobile = ref(false);
             let isSearch = ref(false);
             let showMobileSearch = ref(false);
             let isEnglish = ref(true);
             let showMobileLanguage = ref(false);
+            let currentRoute = ref('');
 
             let width = ref(0);
 
@@ -162,10 +179,14 @@ import { onMounted, onUpdated, ref } from 'vue'
                 }
             }
 
-
             onMounted(() => {
                 updateWidth();
                 window.addEventListener('resize', updateWidth)
+
+                //active route 
+                router.afterEach(to => {
+                    currentRoute.value = to.path;
+                })
 
             })
 
@@ -174,7 +195,7 @@ import { onMounted, onUpdated, ref } from 'vue'
                 window.addEventListener('resize', updateWidth)
             })
 
-            return {isToggle, isMobile, isSearch, showMobileSearch, isEnglish, showMobileLanguage}
+            return {isToggle, isMobile, isSearch, showMobileSearch, isEnglish, showMobileLanguage, currentRoute}
         }
     }
 </script>
@@ -266,7 +287,7 @@ import { onMounted, onUpdated, ref } from 'vue'
        z-index: 9999;
        right: -37px;
        top: 100%;
-       margin-top: 2px;
+       margin-top: 1px;
     }
 
     .languages a {
@@ -290,6 +311,8 @@ import { onMounted, onUpdated, ref } from 'vue'
         opacity: 1;
         visibility: visible;
     }
+
+
 
     .languages img {
         width: 15%;
@@ -395,6 +418,11 @@ import { onMounted, onUpdated, ref } from 'vue'
         color: #fff;
     }
 
+    .route-active {
+        background: var(--btn-color);
+        color: #fff; 
+    }
+
     .nav2 .mobile-language, .nav2 .mobile-mail {
         display: none;
     }
@@ -404,15 +432,17 @@ import { onMounted, onUpdated, ref } from 'vue'
     .product-services .dropdown {
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
-        transform: translateY(0);
+        left: 50%;
+        width: 50%;
+        transform: translateY(0) translateX(-50%);
         opacity: 0;
         pointer-events: none;
         z-index: 99;
-        background-color: rgba(104, 99, 99, 0.85);
+        background-color: rgba(43, 41, 41, 0.75);
         display: flex;
+        gap: 60px;
         transition: 0.3s ease;
+        padding: 30px 40px;
     }
 
     .product-services .dropdown ul li {
@@ -420,6 +450,8 @@ import { onMounted, onUpdated, ref } from 'vue'
         line-height: 0;
         transition: all .5s ease;
         opacity: 0;
+        list-style: none;
+        font-size: 12px;
     }
 
     .product-services:hover .dropdown ul li {
@@ -428,10 +460,29 @@ import { onMounted, onUpdated, ref } from 'vue'
         line-height: 30px;
     }
 
+    .product-services:hover .dropdown ul li a {
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 100;
+        padding: 0;
+        transition: .4s ease-in-out !important;
+        color: #fff !important;
+    }
+
+    .product-services:hover .dropdown ul li a:hover {
+        background: none !important;
+        border-bottom: 1px solid var(--btn-color);
+    }
+
     .product-services:hover>.dropdown {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+    }
+
+    .product-services .dropdown .product .header {
+        font-size: 12px;
+        font-weight: bold;
     }
 
     
@@ -458,7 +509,7 @@ import { onMounted, onUpdated, ref } from 'vue'
         }
 
         .top-item{
-            margin: -15px 0 0 -5px;
+            margin: -18px 0 0 -5px;
             padding-bottom: 5px;
             transition: .3s ease-in-out;
             height: 40px;
@@ -502,6 +553,10 @@ import { onMounted, onUpdated, ref } from 'vue'
             transform: translateY(1px);
 
          }
+
+         .nav1-info-container.nav1-language {
+            display: flex;
+        }
 
          .languages a {
             width: 250px;
@@ -553,6 +608,13 @@ import { onMounted, onUpdated, ref } from 'vue'
             font-weight: 100;
             padding: 13px 15px;
             transition: .2s ease-in-out;
+        }
+        .product-services .dropdown .transformer .header {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .product-services:hover .dropdown ul li a {
+            font-size: 12px;
         }
     }
 
