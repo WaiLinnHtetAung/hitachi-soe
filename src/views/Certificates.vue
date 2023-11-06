@@ -2,7 +2,7 @@
     <div class="certificate">
         <div class="certificate-banner">
             <img src="@/assets/images/certificate.jpg" alt="">
-            <div class="certificate-caption">
+            <div class="certificate-caption" data-aos="fade-left">
                 Awards & Certificates
             </div>
         </div>

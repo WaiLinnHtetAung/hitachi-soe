@@ -1,58 +1,30 @@
 <template>
-    <div class="offload-section">
-        <div class="offload-carousel swiper">
+    <div class="offload-section ">
+        <div class="offload-carousel swiper ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide ">
                     <div class="image-container ">
-                        <div class="img text-end">
-                            <img src="@/assets/images/offload/100f.png"  alt="">
-                        </div>
-                        <div class="img">
-                            <img src="@/assets/images/offload/100.png" alt="">
-                        </div>
+                        <img src="@/assets/images/offload/100.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide ">
                     <div class="image-container ">
-                        <div class="img text-end">
-                            <img src="@/assets/images/offload/160kVA1.png" alt="">
-                        </div>
-                        <div class="img">
-                            <img src="@/assets/images/offload/160kVA2.png" class="kva160" alt="">
-                        </div>
+                        <img src="@/assets/images/offload/160.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide ">
                     <div class="image-container ">
-                        <div class="img text-end">
-                            <img src="@/assets/images/offload/250kVA1.png" alt="">
-                        </div>
-                        <div class="img">
-                            <img src="@/assets/images/offload/250kVA2.png" class="kva160" alt="">
-                        </div>
+                        <img src="@/assets/images/offload/250.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide ">
                     <div class="image-container ">
-                        <div class="img text-end">
-                            <img src="@/assets/images/offload/500kVA.png" alt="">
-                        </div>
-                        <div class="img">
-                            <img src="@/assets/images/offload/500kVA1.png" class="kva160" alt="">
-                        </div>
+                        <img src="@/assets/images/offload/500.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide ">
                     <div class="image-container ">
-                        <div class="img text-end">
-                            <img src="@/assets/images/offload/1000kVA1.png" class="kva10000" alt="">
-                        </div>
-                        <div class="img">
-                            <img src="@/assets/images/offload/1000kVA2.png" class="kva160 kva10000" alt="">
-                        </div>
-                        <div class="img">
-                            <img src="@/assets/images/offload/1000kVA3.png" class="kva10000" alt="">
-                        </div>
+                        <img src="@/assets/images/offload/1000.png" alt="">
                     </div>
                 </div>
             </div>
@@ -124,29 +96,18 @@ import { onMounted, ref } from 'vue'
 
     .swiper {
         padding: 60px 0px 10px;
-        height: 600px;
+        height: 500px;
     }
     .swiper-slide .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 90px;
-    }
-    .swiper-slide .img {
-        width: 400px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
     }
 
-    .swiper-slide .img img {
-        width: 85%;
+    .swiper-slide .image-container img {
+        object-fit: cover;
+        width: 50%;
         height: 100%;
-        object-fit: contain;
-    }
-
-    .swiper-slide .img .kva160 {
-        width: 80%;
     }
 
     .offload-carousel .swiper-pagination .swiper-pagination-bullet {
@@ -185,57 +146,30 @@ import { onMounted, ref } from 'vue'
 
     @media (max-width:1500px) {
         .offload-carousel {
-            margin: 10px 120px 70px;
+            margin: 10px 120px 0px;
         }
     
         .swiper {
-            padding: 40px 0px 10px;
-            height: 460px;
+            padding: 40px 0px 0px;
+            height: 400px;
         }
     
-        .swiper-slide .img img {
-            width: 70%;
-            height: 100%;
-            object-fit: contain;
-        }
-    
-        .swiper-slide .img .kva160 {
-            width: 70%;
-        }
     }
 
     @media (max-width:990px) {
         .offload-carousel {
-            margin: 10px 40px 70px;
+            margin: 10px 40px 0px;
         }
     
         .swiper {
             padding: 40px 0px 10px;
-            height: 460px;
-        }
-        .swiper-slide .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 70px;
-        }
-        .swiper-slide .img {
-            width: 400px;
-            height: 400px;
-        }
-    
-        .swiper-slide .img img {
-            width: 70%;
-            height: 100%;
-            object-fit: contain;
-        }
-    
-        .swiper-slide .img .kva160 {
-            width: 70%;
+            height: 370px;
         }
 
-        .swiper-slide .img .kva10000 {
-            width: 90%;
+        .swiper-slide .image-container img {
+            object-fit: cover;
+            width: 80%;
+            height: 100%;
         }
 
         .offload-spec {
@@ -251,32 +185,12 @@ import { onMounted, ref } from 'vue'
     
         .swiper {
             padding: 20px 0px 10px;
-            height: 300px;
+            height: 200px;
         }
-        .swiper-slide .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 70px;
-        }
-        .swiper-slide .img {
-            width: 300px;
-            height: 220px;
-        }
-    
-        .swiper-slide .img img {
-            width: 80%;
-            height: 100%;
-            object-fit: contain;
-        }
-    
-        .swiper-slide .img .kva160 {
+        .swiper-slide .image-container img {
+            object-fit: cover;
             width: 70%;
-        }
-
-        .swiper-slide .img .kva10000 {
-            width: 110%;
-            margin: 0;
+            height: 100%;
         }
 
         .offload-spec {

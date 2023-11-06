@@ -71,7 +71,49 @@ const routes = [{
         name: 'VCB',
         component: () =>
             import ('@/views/Panel/VCB.vue')
-    }
+    },
+    {
+        path: '/about-us/:slug',
+        name: 'About Us',
+        component: () =>
+            import ('@/views/AboutUs.vue'),
+        props: true
+    },
+    {
+        path: '/career/:slug',
+        name: 'Career',
+        component: () =>
+            import ('@/views/Career.vue'),
+        props: true
+    },
+    {
+        path: '/customers',
+        name: 'Customers',
+        component: () =>
+            import ('@/views/Customer.vue')
+    },
+    {
+        path: '/products',
+        name: '/Products',
+        component: () =>
+            import ('@/views/mobileMenu/ProductsMenu.vue')
+    },
+    {
+        path: '/mobile/about-us',
+        name: 'Mobile About Us',
+        component: () =>
+            import ('@/views/mobileMenu/AboutUs.vue')
+    },
+    {
+        path: '/mobile/career',
+        component: () =>
+            import ('@/views/mobileMenu/Career.vue')
+    },
+    {
+        path: '/comming',
+        component: () =>
+            import ('@/views/Comming.vue')
+    },
 
 ]
 

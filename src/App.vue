@@ -19,6 +19,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  max-width: 1980px;
+  margin: 0 auto;
 }
 
 

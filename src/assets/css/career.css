@@ -1,0 +1,123 @@
+/* ======== menu dropdown ========= */
+
+.menu-wraper .career .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgba(20, 20, 20, 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: 0.3s ease;
+    padding: 30px 15.5% 50px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-wraper .career:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.career .dropdown h2 {
+    color: #fff;
+    font-size: 18px;
+}
+
+.career .menu-item {
+    display: flex;
+    gap: 20px;
+}
+
+.career .menu-item .career-card {
+    width: 24%;
+    background-color: #fff;
+}
+
+.career .dropdown .menu-item img {
+    width: 100%;
+    height: 0;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.career:hover .dropdown .menu-item img {
+    height: 200px;
+}
+
+.career .career-card .link {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.career .career-card .link i {
+    color: var(--btn-color);
+    font-size: 18px;
+}
+
+.career .career-card .link a {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.career .career-card .link a:hover {
+    background-color: #fff !important;
+    color: var(--btn-color) !important;
+}
+
+@media (max-width: 1500px) {
+    .menu-wraper .career .dropdown {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 13% 50px;
+    }
+    .career .dropdown h2 {
+        font-size: 18px;
+    }
+    .career .menu-item {
+        gap: 20px;
+    }
+    .career .menu-item .career-card {
+        width: 23%;
+    }
+    .career:hover .dropdown .menu-item img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .menu-wraper .career .dropdown {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 1% 50px;
+    }
+    .career .dropdown h2 {
+        font-size: 18px;
+    }
+    .career .menu-item {
+        gap: 10px;
+    }
+    .career .menu-item .career-card {
+        width: 24%;
+    }
+    .career:hover .dropdown .menu-item img {
+        height: 180px;
+    }
+    .career .career-card .link i {
+        font-size: 14px;
+    }
+    .career .career-card .link a {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 990px) {
+    .career:hover .dropdown .menu-item img {
+        height: 150px;
+    }
+}

@@ -86,6 +86,8 @@ import Swiper from 'swiper/bundle';
             const swiper = ref();
 
             onMounted(() => {
+                window.scrollTo(0,0);
+
                 swiper.value = new Swiper('.swiper', {
                     speed: 300,
                     loop: true,

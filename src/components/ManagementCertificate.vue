@@ -7,10 +7,10 @@
 
         <div class="certificates d-flex gap-2 ">
             <div class="certificate-card ">
-                <img src="@/assets/images/certificates/14001-2015.jpg" alt="">
+                <img src="@/assets/images/certificates/14001-2015.jpg" alt="" data-aos="fade-right">
 
                 <!-- ---------for mobile ---------  -->
-                <div class="mobile-certificate-info">
+                <div class="mobile-certificate-info" >
                     <div class="row mb-3">
                         <div class="col-5 ">
                             Certificate Number
@@ -53,15 +53,15 @@
                 <!-- -------- mobile end----------  -->
 
                 <div class="certificate-info ">
-                    <div class="row ">
-                        <div class="col-lg-4 col-md-4 ">
+                    <div class="row " data-aos="flip-down">
+                        <div class="col-lg-4 col-md-4 " >
                             Certificate Number
                         </div>
                         <div class="col-lg-7 col-md-8 ">
                             : 21IEJB21/R1
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Standard(s)
                         </div>
@@ -69,7 +69,7 @@
                             : ISO 14001:2015
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Accreditation Body
                         </div>
@@ -77,7 +77,7 @@
                             : International Accreditation Service
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Certification Body
                         </div>
@@ -85,7 +85,7 @@
                             : AQC MIDDLE EAST – F.Z.E
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-7">
                             <router-link to="certificates/14001" class="btn certificate-btn">View Certificate Information</router-link>
                         </div>
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="certificate-card">
-                <img src="@/assets/images/certificates/9001-2015.jpg" alt="">
+                <img src="@/assets/images/certificates/9001-2015.jpg" alt="" data-aos="fade-right">
 
 
                 <!-- ---------for mobile ---------  -->
@@ -141,7 +141,7 @@
 
 
                 <div class="certificate-info ">
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Certificate Number
                         </div>
@@ -149,7 +149,7 @@
                             : 21IQJF20/R1
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Standard(s)
                         </div>
@@ -157,7 +157,7 @@
                             : ISO 9001:2015
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Accreditation Body
                         </div>
@@ -165,7 +165,7 @@
                             : International Accreditation Service
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Certification Body
                         </div>
@@ -173,7 +173,7 @@
                             : AQC MIDDLE EAST – F.Z.E
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-7">
                             <router-link to="/certificates/9001" class="btn certificate-btn">View Certificate Information</router-link>
                         </div>

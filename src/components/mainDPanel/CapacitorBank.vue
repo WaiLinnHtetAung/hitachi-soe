@@ -117,7 +117,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
     export default {
         setup() {
             let isShow = ref(false);
@@ -126,6 +126,9 @@ import { ref } from 'vue';
                 isShow.value = !isShow.value;
             }
 
+            onMounted(() => {
+                window.scrollTo(0,0);
+            })
 
             return {showSpec, isShow}
         }

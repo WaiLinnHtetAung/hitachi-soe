@@ -7,7 +7,7 @@
 
         <div class="certificates d-flex gap-2">
             <div class="certificate-card ">
-                <img src="@/assets/images/certificates/2018-13.png" alt="">
+                <img src="@/assets/images/certificates/2018-13.png" alt="" data-aos="fade-right">
 
                 <!-- ---------for mobile ---------  -->
                 <div class="mobile-certificate-info">
@@ -49,7 +49,7 @@
                 <!-- -------- mobile end----------  -->
 
                 <div class="certificate-info ">
-                    <div class="row ">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4 ">
                             Title
                         </div>
@@ -57,7 +57,7 @@
                             : Type Test Certificate of Complete Type Test
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Certificate Number
                         </div>
@@ -65,7 +65,7 @@
                             : TIC 2008-13
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Ratings
                         </div>
@@ -73,7 +73,7 @@
                             : 500 kVA-33 kV/400 V-Dyn11-50 Hz
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Accreditation Body
                         </div>
@@ -86,7 +86,7 @@
 
 
             <div class="certificate-card">
-                <img src="@/assets/images/certificates/2016.png" alt="">
+                <img src="@/assets/images/certificates/2016.png" alt="" data-aos="fade-right">
 
 
                 <!-- ---------for mobile ---------  -->
@@ -129,7 +129,7 @@
 
 
                 <div class="certificate-info ">
-                    <div class="row">
+                    <div class="row" data-aos="flip-down"> 
                         <div class="col-lg-4 col-md-4">
                             Title
                         </div>
@@ -137,7 +137,7 @@
                             : Type Test Certificate of Complete Type Test
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down"> 
                         <div class="col-lg-4 col-md-4">
                             Certificate Number
                         </div>
@@ -145,7 +145,7 @@
                             : 2016TS03718
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down"> 
                         <div class="col-lg-4 col-md-4">
                             Ratings
                         </div>
@@ -153,7 +153,7 @@
                             : 315 kVA-33 kV/400 V- 50 Hz
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down"> 
                         <div class="col-lg-4 col-md-4">
                             Accreditation Body
                         </div>
@@ -167,7 +167,7 @@
 
         <div class="certificates d-flex gap-2">
             <div class="certificate-card ">
-                <img src="@/assets/images/certificates/22029.png" alt="">
+                <img src="@/assets/images/certificates/22029.png" alt="" data-aos="fade-right">
 
                 <!-- ---------for mobile ---------  -->
                 <div class="mobile-certificate-info">
@@ -209,7 +209,7 @@
                 <!-- -------- mobile end----------  -->
 
                 <div class="certificate-info ">
-                    <div class="row ">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4 ">
                             Title
                         </div>
@@ -217,7 +217,7 @@
                             : ASTA Certificate of Type Tests
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Certificate Number
                         </div>
@@ -225,7 +225,7 @@
                             : 22029
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Ratings
                         </div>
@@ -233,7 +233,7 @@
                             : 30MVA, 66000/33000, Three-Phases, 50 Hz
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Accreditation Body
                         </div>
@@ -245,7 +245,7 @@
             </div>
 
             <div class="certificate-card ">
-                <img src="@/assets/images/certificates/100008.png" alt="">
+                <img src="@/assets/images/certificates/100008.png" alt="" data-aos="fade-right">
 
                 <!-- ---------for mobile ---------  -->
                 <div class="mobile-certificate-info">
@@ -287,7 +287,7 @@
                 <!-- -------- mobile end----------  -->
 
                 <div class="certificate-info ">
-                    <div class="row ">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4 ">
                             Title
                         </div>
@@ -295,7 +295,7 @@
                             : General Performance Test
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Certificate Number
                         </div>
@@ -303,7 +303,7 @@
                             : 20TC100008
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Test Object
                         </div>
@@ -311,7 +311,7 @@
                             : Metal Enclosed Switchgear
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="flip-down">
                         <div class="col-lg-4 col-md-4">
                             Accreditation Body
                         </div>
