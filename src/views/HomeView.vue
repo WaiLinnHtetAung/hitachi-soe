@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import ThreeSixtyView from '../components/ThreeSixtyView'
-import Career from '../components/Career'
-import OurProducts from '../components/OurProducts'
-import MainSection from '../components/MainSection'
-import OfficeBranch from '../components/OfficeBranch'
-import Carousel from '../components/Carousel'
+import ThreeSixtyView from "../components/ThreeSixtyView";
+import Career from "../components/Career";
+import OurProducts from "../components/OurProducts";
+import MainSection from "../components/MainSection";
+import OfficeBranch from "../components/OfficeBranch";
+import Carousel from "../components/Carousel";
 // @ is an alias to /src
 
 export default {
@@ -24,14 +24,16 @@ export default {
     Career,
     OurProducts,
     MainSection,
-    OfficeBranch, Carousel },
+    OfficeBranch,
+    Carousel,
+  },
 
-}
+  setup() {},
+};
 </script>
 
-
 <style scoped>
-  .home {
-    overflow-x: hidden;
-  }
+.home {
+  overflow-x: hidden;
+}
 </style>

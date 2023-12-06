@@ -1,16 +1,17 @@
 <template>
   <div class="md-speech">
-    <h2>Chairman Greeting</h2>
+    <h2>MD Speech</h2>
     <div class="img">
       <img src="@/assets/images/MD.jpg" alt="" />
     </div>
     <p>Dear Valued Customers,</p>
     <p>
       This year 2023, Hitachi Soe Electric & Machinery Co., Ltd. (HISEM) proudly
-      celebrates our 8th anniversary since the merger of two exceptional
-      organizations between SEM and Hitachi Group. As the Managing Director, I
-      would like to take a moment to express our deepest gratitude for your
-      unwavering support and loyalty throughout this incredible journey.
+      celebrates our 8<sup>th</sup> anniversary since the merger of two
+      exceptional organizations between SEM and Hitachi Group. As the Managing
+      Director, I would like to take a moment to express our deepest gratitude
+      for your unwavering support and loyalty throughout this incredible
+      journey.
     </p>
     <p>
       The traditional seventh wedding anniversary symbol is copper, and the
@@ -56,7 +57,14 @@
 </template>
 
 <script>
-export default {};
+import { onMounted } from "vue";
+export default {
+  setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0);
+    });
+  },
+};
 </script>
 
 <style scoped>

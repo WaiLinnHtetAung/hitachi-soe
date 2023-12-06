@@ -121,17 +121,17 @@
 
   <!-- main nav bar  -->
 
-  <nav class="nav2">
+  <nav class="nav2" :class="{ fix: isNavFix }">
     <div class="nav2-wraper">
-      <a v-if="!isToggle" class="navbar-brand" href="/"
-        ><img
+      <a v-if="!isToggle" class="navbar-brand" href="/">
+        <img
           class="logo-text"
           src="@/assets/images/favicon.png"
           height="50"
           alt="Hitachi, Ltd."
         />
-        Hitachi Soe Electric & Machinery</a
-      >
+        Hitachi Soe Electric & Machinery
+      </a>
 
       <div
         class="menu-wraper"
@@ -145,9 +145,12 @@
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
+          <router-link to="/products" class="mobile-menu-link"
+            >Products & Services</router-link
+          >
           <router-link
-            to="/products"
-            class="product-services"
+            to="#"
+            class="product-services desk-menu-link"
             :class="{
               'route-active': currentRoute.substring(0, 9) === '/products',
             }"
@@ -182,20 +185,99 @@
                 <ul>
                   <li class="mb-2 header">PANELS</li>
                   <li>
-                    <router-link to="/products/panels/main-distribution-panel"
-                      >Main Distribution Panel</router-link
+                    <router-link to="/products/panels/unit-package-substation"
+                      >Unit Package Substation</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/products/panels/acb">ACB</router-link>
+                    <router-link to="/products/panels/panel-with-drop-out-fuse">
+                      Drop Out Fuse / Encosed Cut Out Fuse
+                    </router-link>
                   </li>
                   <li>
-                    <router-link to="/products/panels/package-substation"
-                      >Package Substation</router-link
+                    <router-link
+                      to="/products/panels/hybrid-vcb-switchgear-panel"
+                    >
+                      Hybrid VCB Switchgear Panel
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/acb-panel">
+                      ACB Panel
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/ats-panel">
+                      ATS Panel
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/mdb-mccb">
+                      Main Distribution Panel with MCCB
+                    </router-link>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel product">
+                <ul>
+                  <li class="mb-2 header">-</li>
+                  <li>
+                    <router-link to="/products/panels/mdb-cb"
+                      >Main Distribution Panel with CB</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/products/panels/vcb">VCB</router-link>
+                    <router-link to="/products/panels/low-voltage-cb">
+                      Low Voltage Capacitor Bank
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/backup-power-panel">
+                      OLTC Backup Power Panel
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/power-control">
+                      OLTC Control Panel
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/marshalling-kiosk">
+                      Marshalling Kiosk
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/panels/meter-panel">
+                      kWh Meter Panel
+                    </router-link>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel product">
+                <ul>
+                  <li class="mb-2 header">Service Types</li>
+                  <li>
+                    <router-link to="/products/services/installation-service"
+                      >Installation Service</router-link
+                    >
+                  </li>
+                  <li>
+                    <router-link to="/products/services/aftersale-service">
+                      After Sale Serivce
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/products/services/preventice-service">
+                      Preventice Maintenance Service
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/comming"> Repairing Service </router-link>
+                  </li>
+                  <li>
+                    <router-link to="/comming">
+                      Testing & Inspection
+                    </router-link>
                   </li>
                 </ul>
               </div>
@@ -208,7 +290,13 @@
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
-          <router-link to="/comming">A-Transformer</router-link>
+          <router-link
+            to="/amorphous-transformer"
+            :class="{
+              'route-active': currentRoute === '/amorphous-transformer',
+            }"
+            >Amorphous Transformer</router-link
+          >
           <i class="bx bx-chevron-right mobile-arrow"></i>
         </div>
         <div
@@ -216,9 +304,12 @@
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
+          <router-link class="mobile-menu-link" to="/mobile/about-us"
+            >About Us</router-link
+          >
           <router-link
-            to="/mobile/about-us"
-            class="about-us"
+            to="#"
+            class="about-us desk-menu-link"
             :class="{
               'route-active': currentRoute.substring(0, 9) === '/about-us',
             }"
@@ -300,7 +391,13 @@
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
-          <router-link to="/comming">News</router-link>
+          <router-link
+            to="/news"
+            :class="{
+              'route-active': currentRoute === '/news',
+            }"
+            >News</router-link
+          >
           <i class="bx bx-chevron-right mobile-arrow"></i>
         </div>
         <div
@@ -308,7 +405,13 @@
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
-          <router-link to="/customers">Our Clients</router-link>
+          <router-link
+            :class="{
+              'route-active': currentRoute === '/customers',
+            }"
+            to="/customers"
+            >Our Clients</router-link
+          >
           <i class="bx bx-chevron-right mobile-arrow"></i>
         </div>
         <div
@@ -316,9 +419,12 @@
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
+          <router-link class="mobile-menu-link" to="/mobile/career"
+            >Career</router-link
+          >
           <router-link
-            to="/mobile/career"
-            class="career"
+            to="#"
+            class="career desk-menu-link"
             :class="{
               'route-active': currentRoute.substring(0, 7) === '/career',
             }"
@@ -477,6 +583,28 @@ export default {
     let showMobileLanguage = ref(false);
     let currentRoute = ref("");
 
+    let isNavFix = ref(false);
+    let prevScrollY = ref(0);
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 100;
+
+      if (scrollY > prevScrollY.value) {
+        //scroll down
+        isNavFix.value = false;
+      } else {
+        //scroll up
+        if (scrollY > threshold) {
+          isNavFix.value = true;
+        } else {
+          isNavFix.value = false;
+        }
+      }
+
+      prevScrollY.value = scrollY;
+    };
+
     let width = ref(0);
 
     let updateWidth = () => {
@@ -490,6 +618,7 @@ export default {
 
     onMounted(() => {
       updateWidth();
+      window.addEventListener("scroll", handleScroll);
       window.addEventListener("resize", updateWidth);
 
       //active route
@@ -511,6 +640,7 @@ export default {
       isEnglish,
       showMobileLanguage,
       currentRoute,
+      isNavFix,
     };
   },
 };
@@ -694,6 +824,45 @@ a {
   position: relative;
 }
 
+.nav2.fix {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -5px;
+  z-index: 999999;
+  animation: drop 0.3s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50px;
+  }
+
+  15% {
+    top: -45px;
+  }
+
+  25% {
+    top: -40px;
+  }
+
+  35% {
+    top: -30px;
+  }
+
+  50% {
+    top: -20px;
+  }
+
+  75% {
+    top: -13px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
 .nav2-wraper {
   padding: 10px 15.5% 10px;
   display: flex;
@@ -713,6 +882,10 @@ a {
 
 .nav2 .mobile-menu {
   display: inline-block;
+}
+
+.nav2 .mobile-menu-link {
+  display: none;
 }
 
 .mb-language {
@@ -748,7 +921,7 @@ a {
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 50%;
+  width: 65%;
   transform: translateY(0) translateX(-50%);
   opacity: 0;
   pointer-events: none;
@@ -800,6 +973,13 @@ a {
 .product-services .dropdown .product .header {
   font-size: 14px;
   font-weight: bolder;
+}
+
+@media (max-width: 1620px) {
+  .product-services .dropdown {
+    position: absolute;
+    width: 75%;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1500px) {
@@ -930,6 +1110,20 @@ a {
   }
 }
 
+@media (max-width: 1410px) {
+  .product-services .dropdown {
+    position: absolute;
+    width: 80%;
+  }
+}
+
+@media (max-width: 1320px) {
+  .product-services .dropdown {
+    position: absolute;
+    width: 85%;
+  }
+}
+
 @media (max-width: 1260px) {
   /* ------top navbar ---------- */
   .nav1 {
@@ -966,8 +1160,21 @@ a {
   }
 
   /* --------- main navbar------ */
+
+  .product-services .dropdown {
+    position: absolute;
+    width: 95%;
+  }
   .nav2-wraper {
     padding: 0 1%;
+  }
+}
+
+@media (max-width: 1110px) {
+  .product-services .dropdown {
+    position: absolute;
+    width: 110%;
+    gap: 30px;
   }
 }
 
@@ -1067,6 +1274,15 @@ a {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: -2px;
+  }
+}
+
+@media (max-width: 880px) {
+  .product-services .dropdown {
+    gap: 0px;
+    width: 110%;
+    left: 50%;
+    padding: 30px 10px;
   }
 }
 
@@ -1228,6 +1444,14 @@ a {
     opacity: 1;
     visibility: visible;
     margin-top: -2px;
+  }
+
+  .nav2 .desk-menu-link {
+    display: none;
+  }
+
+  .nav2 .mobile-menu-link {
+    display: block;
   }
 
   .nav2 .mobile-menu {
