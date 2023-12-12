@@ -3,7 +3,7 @@
     <div class="banner">
       <img src="@/assets/images/customer/banner.jpg" alt="" />
     </div>
-    <h2>Our Clients</h2>
+    <h2>Our Clients  </h2>
     <div class="content">
       <div v-for="i in 52" :key="i" class="item" data-aos="zoom-in">
         <img
