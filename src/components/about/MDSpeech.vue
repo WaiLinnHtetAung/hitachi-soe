@@ -2,7 +2,7 @@
   <div class="md-speech">
     <h2>MD Speech</h2>
     <div class="img">
-      <img src="@/assets/images/MD.jpg" alt="" />
+      <img src="@/assets/images/md.jpg" alt="" />
     </div>
     <p>Dear Valued Customers,</p>
     <p>

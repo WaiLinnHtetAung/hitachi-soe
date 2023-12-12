@@ -5,37 +5,10 @@
     </div>
     <h2>Our Clients  </h2>
     <div class="content">
-      <div v-for="i in 52" :key="i" class="item" data-aos="zoom-in">
+      <div v-for="i in 45" :key="i" class="item" data-aos="zoom-in">
         <img
-          :class="{
-            'large-img':
-              i == 2 ||
-              i == 35 ||
-              i == 38 ||
-              i == 41 ||
-              i == 42 ||
-              i == 45 ||
-              i == 15 ||
-              i == 16 ||
-              i == 17,
-            'middle-img':
-              i == 1 ||
-              i == 3 ||
-              i == 4 ||
-              i == 8 ||
-              i == 10 ||
-              i == 12 ||
-              i == 18 ||
-              i == 21 ||
-              i == 22 ||
-              i == 31 ||
-              i == 32 ||
-              i == 36 ||
-              i == 39 ||
-              i == 43 ||
-              i > 45,
-          }"
-          :src="require(`@/assets/images/customer/${i}.jpg`)"
+          
+          :src="require(`@/assets/images/customer/${i}.png`)"
           alt=""
         />
       </div>
@@ -82,14 +55,13 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 5px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   box-shadow: 1px 1px 3px gray;
 }
 
 .customer .content .item img {
   object-fit: cover;
-  width: 60%;
 }
 
 .customer .content .item img.middle-img {
