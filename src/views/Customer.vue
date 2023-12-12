@@ -3,14 +3,10 @@
     <div class="banner">
       <img src="@/assets/images/customer/banner.jpg" alt="" />
     </div>
-    <h2>Our Clients  </h2>
+    <h2>Our Clients</h2>
     <div class="content">
       <div v-for="i in 45" :key="i" class="item" data-aos="zoom-in">
-        <img
-          
-          :src="require(`@/assets/images/customer/${i}.png`)"
-          alt=""
-        />
+        <img :src="require(`@/assets/images/customer/${i}.png`)" alt="" />
       </div>
     </div>
   </div>
@@ -47,7 +43,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .customer .content .item {
