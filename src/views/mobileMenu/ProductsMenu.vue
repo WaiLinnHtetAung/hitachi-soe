@@ -2,11 +2,30 @@
   <div class="mobile-menu">
     <div class="top-link">
       <router-link to="/">Home</router-link>
-      <span>></span>
+      <span>&gt;</span>
       <span>Products & Services</span>
     </div>
+    <div class="my-4">
+      <div class="btn-group">
+        <button
+          class="btn btn-sm btn-outline-danger"
+          @click="currentTab = 'products'"
+          :class="{ 'btn-danger text-white': currentTab == 'products' }"
+        >
+          Products
+        </button>
+        <button
+          class="btn btn-sm btn-outline-danger"
+          @click="currentTab = 'services'"
+          :class="{ 'btn-danger text-white': currentTab == 'services' }"
+        >
+          Services
+        </button>
+      </div>
+    </div>
     <div class="content">
-      <div class="product">
+      <!-- products -->
+      <div class="product" v-if="currentTab === 'products'">
         <h2>Transformers</h2>
 
         <div class="items">
@@ -22,11 +41,28 @@
         </div>
       </div>
 
-      <div class="product">
+      <div class="product" v-if="currentTab === 'products'">
         <h2>Panels</h2>
 
         <div class="items">
           <div class="item" v-for="(item, i) in panels" :key="i">
+            <div class="img">
+              <img :src="item.img" alt="" />
+            </div>
+            <div class="link">
+              <i class="fa-solid fa-caret-right"></i>
+              <router-link :to="item.link">{{ item.title }}</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- services -->
+      <div class="product" v-if="currentTab === 'services'">
+        <h2>Services</h2>
+
+        <div class="items">
+          <div class="item" v-for="(item, i) in services" :key="i">
             <div class="img">
               <img :src="item.img" alt="" />
             </div>
@@ -42,7 +78,7 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import "@/assets/css/mobilemenu.css";
 
 export default {
@@ -50,6 +86,9 @@ export default {
     onMounted(() => {
       window.scrollTo(0, 0);
     });
+
+    let currentTab = ref("products");
+
     let transformers = [
       {
         img: require("@/assets/images/offload/offload.jpg"),
@@ -96,7 +135,7 @@ export default {
         link: "/products/panels/acb-panel",
       },
       {
-        img: require("@/assets/images/panels/ACB.jpg"),
+        img: require("@/assets/images/panels/ats.png"),
         title: "ATS Panel",
         link: "/products/panels/ats-panel",
       },
@@ -137,7 +176,36 @@ export default {
       },
     ];
 
-    return { transformers, panels };
+    let services = [
+      {
+        img: require("@/assets/images/services/installation.png"),
+        title: "Installation Service",
+        link: "/products/services/installation-service",
+      },
+      {
+        img: require("@/assets/images/services/after-sale.png"),
+        title: "After Sale Service",
+        link: "/products/services/aftersale-service",
+      },
+      {
+        img: require("@/assets/images/services/preventice-service.png"),
+        title: "Preventice Maintenance Service",
+        link: "/products/services/preventice-service",
+      },
+
+      {
+        img: require("@/assets/images/services/repare.png"),
+        title: "Repairing Services",
+        link: "/comming",
+      },
+      {
+        img: require("@/assets/images/services/inspection.png"),
+        title: "Testing & Inspection",
+        link: "/comming",
+      },
+    ];
+
+    return { transformers, panels, services, currentTab };
   },
 };
 </script>

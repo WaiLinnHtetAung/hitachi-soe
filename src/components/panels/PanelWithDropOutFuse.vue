@@ -23,7 +23,7 @@
             <td class="text-center">630</td>
           </tr>
           <tr data-aos="flip-up">
-            <td>Rated Short-Time Withstand</td>
+            <td>Rated Short-Time Withstand Current</td>
             <td class="text-center">kA</td>
             <td class="text-center">20kA</td>
           </tr>
@@ -149,6 +149,34 @@
             <td>Rated Current</td>
             <td class="text-center">A</td>
             <td class="text-center">50</td>
+          </tr>
+          <tr data-aos="flip-up" class="bg-secondary p-0 m-0">
+            <th colspan="3" class="fs-4 text-white">Drop Out Fuse</th>
+          </tr>
+          <tr data-aos="flip-up">
+            <td>Maker</td>
+            <td class="text-center">&nbsp;</td>
+            <td class="text-center">Right Electric</td>
+          </tr>
+          <tr data-aos="flip-up">
+            <td>Country of Origin</td>
+            <td class="text-center">&nbsp;</td>
+            <td class="text-center">China</td>
+          </tr>
+          <tr data-aos="flip-up">
+            <td>Type</td>
+            <td class="text-center">-</td>
+            <td class="text-center">RTF1-12/100A</td>
+          </tr>
+          <tr data-aos="flip-up">
+            <td>Rated Voltage</td>
+            <td class="text-center">kV</td>
+            <td class="text-center">12</td>
+          </tr>
+          <tr data-aos="flip-up">
+            <td>Rated Current</td>
+            <td class="text-center">A</td>
+            <td class="text-center">100</td>
           </tr>
         </tbody>
       </table>

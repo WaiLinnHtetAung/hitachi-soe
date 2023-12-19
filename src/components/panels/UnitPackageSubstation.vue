@@ -19,7 +19,7 @@
           </tr>
           <tr data-aos="flip-up">
             <td>Rated Voltage</td>
-            <td class="text-center">V</td>
+            <td class="text-center">KV</td>
             <td class="text-center" colspan="2">6.6kV / 11kV / 6.6~11kV</td>
           </tr>
           <tr data-aos="flip-up">

@@ -40,7 +40,7 @@
             <td rowspan="2" class="align-middle">Applied Standard</td>
             <td rowspan="2">&nbsp;</td>
             <td>LV Capacitor Bank</td>
-            <td class="text-center">IEC 60831</td>
+            <td class="text-center">IEC 61921</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Degree of Protection</td>

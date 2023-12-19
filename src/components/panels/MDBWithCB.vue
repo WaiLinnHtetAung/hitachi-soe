@@ -38,7 +38,7 @@
           </tr>
           <tr data-aos="flip-up">
             <td>Number of Pole (MCCB)</td>
-            <td class="text-center">Phase</td>
+            <td class="text-center">Pole</td>
             <td class="text-center" colspan="2">3 / 4</td>
           </tr>
           <tr data-aos="flip-up">
@@ -49,7 +49,7 @@
           </tr>
           <tr data-aos="flip-up">
             <td>LV Capacitor Bank</td>
-            <td class="text-center">IEC 60831</td>
+            <td class="text-center">IEC 61921</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Degree of Protection</td>

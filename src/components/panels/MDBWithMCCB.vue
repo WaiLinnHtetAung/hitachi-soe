@@ -31,7 +31,7 @@
           </tr>
           <tr data-aos="flip-up">
             <td>Number of Pole</td>
-            <td class="text-center">Phase</td>
+            <td class="text-center">Pole</td>
             <td class="text-center" colspan="2">3 / 4</td>
           </tr>
           <tr data-aos="flip-up">

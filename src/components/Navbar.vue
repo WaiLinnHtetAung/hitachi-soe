@@ -255,7 +255,7 @@
               </div>
               <div class="panel product">
                 <ul>
-                  <li class="mb-2 header">Service Types</li>
+                  <li class="mb-2 header">SERVICE TYPES</li>
                   <li>
                     <router-link to="/products/services/installation-service"
                       >Installation Service</router-link
