@@ -85,7 +85,7 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="installation-service-carousel swiper">
+      <div class="installation-service-carousel ">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="image-container">
@@ -111,7 +111,7 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/two_eleven/3.jpg')
+                  require('@/assets/images/services/installation/two_eleven/3.png')
                 "
                 alt=""
               />
@@ -121,7 +121,7 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/two_eleven/4.jpg')
+                  require('@/assets/images/services/installation/two_eleven/4.png')
                 "
                 alt=""
               />
@@ -131,7 +131,7 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/two_eleven/5.jpg')
+                  require('@/assets/images/services/installation/two_eleven/5.png')
                 "
                 alt=""
               />
