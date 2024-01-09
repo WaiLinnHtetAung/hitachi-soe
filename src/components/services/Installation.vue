@@ -85,13 +85,13 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="installation-service-carousel">
+      <div class="installation-service-carousel swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/two_eleven/1.jpg')
+                  require('@/assets/images/services/installation/two_eleven/1.png')
                 "
                 alt=""
               />
@@ -101,7 +101,7 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/two_eleven/2.jpg')
+                  require('@/assets/images/services/installation/two_eleven/2.png')
                 "
                 alt=""
               />
@@ -138,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
+        <!-- <div class="swiper-pagination mt-3" id="swiper-paginate"></div> -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
@@ -186,13 +186,13 @@
       </div>
     </div>
     <div class="my-5 row">
-      <div class="installation-service-carousel swiper">
+      <div class="installation-service-carousel">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/package_unit/1.jpeg')
+                  require('@/assets/images/services/installation/package_unit/1.png')
                 "
                 alt=""
               />
@@ -212,7 +212,7 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/package_unit/3.jpeg')
+                  require('@/assets/images/services/installation/package_unit/3.png')
                 "
                 alt=""
               />
@@ -222,7 +222,7 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/package_unit/4.jpg')
+                  require('@/assets/images/services/installation/package_unit/4.png')
                 "
                 alt=""
               />
@@ -232,14 +232,14 @@
             <div class="image-container">
               <img
                 :src="
-                  require('@/assets/images/services/installation/package_unit/5.jpg')
+                  require('@/assets/images/services/installation/package_unit/5.png')
                 "
                 alt=""
               />
             </div>
           </div>
         </div>
-        <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
+        <!-- <div class="swiper-pagination mt-3" id="swiper-paginate"></div> -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
@@ -348,7 +348,7 @@ export default {
       swiper.value = new Swiper(".swiper", {
         speed: 300,
         slidesPerView: "3",
-        spaceBetween: 30,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
           delay: 5000,
