@@ -1,5 +1,8 @@
 <template>
   <div class="aftersale-service">
+    <h2 data-aos="fade-right" class="text-center fw-bold my-5 service-title">
+      After Sale Service
+    </h2>
     <div class="aftersale-service-carousel swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -11,10 +14,18 @@
       <div class="swiper-button-next"></div>
     </div>
 
-    <h2 class="mt-5 mb-4 fw-bold">After Sale Service Process</h2>
-    <ol>
-      <li>Survey (Online/Onsite)</li>
-      <li>Submit Quotation</li>
+    <div class="my-5">
+      <h2 class="mt-5 mb-4 fw-bold">Available Services</h2>
+      <ul data-aos="fade-up">
+        <li>Transformer (upto 230 kV)</li>
+        <li>Switchgear Panel (upto 33 kV)</li>
+      </ul>
+    </div>
+
+    <h3 class="mt-5 mb-4 fw-bold">After Sale Service Process</h3>
+    <ol data-aos="fade-down">
+      <li class="text-muted">Survey (Online/Onsite)</li>
+      <li class="text-muted">Submit Quotation</li>
     </ol>
     <br />
 
@@ -290,11 +301,26 @@ export default {
   padding: 0px 15.6%;
 }
 
+.service-title {
+  position: relative;
+}
+.service-title::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background-color: var(--btn-color);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -10px;
+}
+
 .aftersale-service .swiper {
   height: 500px;
 }
 
-.aftersale-service ol li {
+.aftersale-service ol li,
+.aftersale-service ul li {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 18px;
@@ -303,6 +329,25 @@ export default {
 @media (max-width: 1500px) {
   .aftersale-service {
     padding: 0px 13%;
+  }
+
+  .aftersale-service .swiper {
+    height: 350px;
+  }
+
+  .aftersale-service h2 {
+    font-size: 24px;
+  }
+
+  .aftersale-service h3 {
+    font-size: 20px;
+  }
+
+  .aftersale-service ol li,
+  .aftersale-service ul li {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 18px;
   }
 }
 
@@ -316,7 +361,8 @@ export default {
   .aftersale-service h2 {
     font-size: 25px;
   }
-  .aftersale-service ol li {
+  .aftersale-service ol li,
+  .aftersale-service ul li {
     font-size: 18px;
   }
 

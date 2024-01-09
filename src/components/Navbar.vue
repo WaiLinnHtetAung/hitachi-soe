@@ -275,7 +275,7 @@
                     <router-link to="/comming"> Repairing Service </router-link>
                   </li>
                   <li>
-                    <router-link to="/comming">
+                    <router-link to="/products/services/testing-service">
                       Testing & Inspection
                     </router-link>
                   </li>

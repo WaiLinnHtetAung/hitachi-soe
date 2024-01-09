@@ -1,6 +1,9 @@
 <template>
   <div class="installation-service">
-    <div class="installation-service-carousel swiper">
+    <h2 data-aos="fade-right" class="text-center fw-bold my-5 service-title">
+      Installation Service
+    </h2>
+    <div class="installation-service-carousel">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="@/assets/images/services/installation/banner.webp" alt="" />
@@ -11,11 +14,19 @@
       <div class="swiper-button-next"></div>
     </div>
 
-    <h2 class="mt-5 mb-4 fw-bold">Installation Service Process</h2>
-    <ol>
-      <li>Onsite Survey</li>
-      <li>Discuss to Layout Design & Location</li>
-      <li>Submit Quotation</li>
+    <div class="my-5">
+      <h2 class="mt-5 mb-4 fw-bold">Available Services</h2>
+      <ul data-aos="fade-up">
+        <li>Substation Installation Service (upto 66 kV)</li>
+        <li>Switchgear Panel Installation Service (upto 33 kV)</li>
+      </ul>
+    </div>
+
+    <h3 class="mt-5 mb-4 fw-bold">Installation Service Process</h3>
+    <ol data-aos="fade-down">
+      <li class="text-muted">Onsite Survey</li>
+      <li class="text-muted">Discuss to Layout Design & Location</li>
+      <li class="text-muted">Submit Quotation</li>
     </ol>
     <br />
 
@@ -74,55 +85,62 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_eleven/1.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="fade-down-right"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_eleven/2.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_eleven/3.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="fade-down-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_eleven/4.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_eleven/5.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-right"
-        />
+      <div class="installation-service-carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_eleven/1.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_eleven/2.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_eleven/3.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_eleven/4.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_eleven/5.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
     <hr />
@@ -168,59 +186,65 @@
       </div>
     </div>
     <div class="my-5 row">
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/package_unit/1.jpeg')
-          "
-          alt=""
-          class="w-100 h-100 mb-3"
-          data-aos="fade-down-right"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/package_unit/2.jpg')
-          "
-          alt=""
-          class="w-100 h-100 mb-3"
-          data-aos="flip-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/package_unit/3.jpeg')
-          "
-          alt=""
-          class="w-100 h-100 mb-3"
-          data-aos="fade-down-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/package_unit/4.jpg')
-          "
-          alt=""
-          class="w-100 h-100 mb-3"
-          data-aos="flip-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/package_unit/5.jpg')
-          "
-          alt=""
-          class="w-100 h-100 mb-3"
-          data-aos="flip-right"
-        />
+      <div class="installation-service-carousel swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/package_unit/1.jpeg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/package_unit/2.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/package_unit/3.jpeg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/package_unit/4.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/package_unit/5.jpg')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
     <hr />
-
     <!-- two people type  -->
     <div
       class="exp-head d-flex align-items-center gap-3 my-5"
@@ -305,6 +329,7 @@
         />
       </div>
     </div>
+
     <hr />
   </div>
 </template>
@@ -316,11 +341,34 @@ import { onMounted, ref } from "vue";
 export default {
   setup() {
     const swiper = ref();
+    const packageSwiper = ref();
 
     onMounted(() => {
       window.scrollTo(0, 0);
       swiper.value = new Swiper(".swiper", {
         speed: 300,
+        slidesPerView: "3",
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          type: "bullets",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      packageSwiper.value = new Swiper(".package-swiper", {
+        speed: 300,
+        slidesPerView: "3",
+        spaceBetween: 30,
         loop: true,
         autoplay: {
           delay: 5000,
@@ -338,7 +386,7 @@ export default {
       });
     });
 
-    return { swiper };
+    return { swiper, packageSwiper };
   },
 };
 </script>
@@ -348,11 +396,26 @@ export default {
   padding: 0px 15.6%;
 }
 
+.service-title {
+  position: relative;
+}
+.service-title::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background-color: var(--btn-color);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -10px;
+}
+
 .installation-service .swiper {
   height: 500px;
 }
 
-.installation-service ol li {
+.installation-service ol li,
+.installation-service ul li {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 18px;
@@ -361,6 +424,25 @@ export default {
 @media (max-width: 1500px) {
   .installation-service {
     padding: 0px 13%;
+  }
+
+  .installation-service .swiper {
+    height: 350px;
+  }
+
+  .installation-service h2 {
+    font-size: 24px;
+  }
+
+  .installation-service h3 {
+    font-size: 20px;
+  }
+
+  .installation-service ol li,
+  .installation-service ul li {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 18px;
   }
 }
 
@@ -374,7 +456,8 @@ export default {
   .installation-service h2 {
     font-size: 25px;
   }
-  .installation-service ol li {
+  .installation-service ol li,
+  .installation-service ul li {
     font-size: 18px;
   }
 
