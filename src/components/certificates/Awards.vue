@@ -8,7 +8,7 @@
     <div class="certificates d-flex gap-2">
       <div class="awards-card">
         <img
-          src="@/assets/images/certificates/inspiration-of-the-year.jpg"
+          src="@/assets/images/certificates/inspiration-of-the-year.png"
           alt=""
           data-aos="fade-right"
         />
