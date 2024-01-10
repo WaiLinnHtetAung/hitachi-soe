@@ -8,6 +8,10 @@ const routes = [
     component: HomeView,
   },
   {
+    path: "/about-hitachi-soe",
+    component: () => import("@/views/AboutHitachi.vue"),
+  },
+  {
     path: "/amorphous-transformer",
     name: "AmorphousTransfer",
     component: () => import("@/views/Amorphous.vue"),
@@ -87,7 +91,16 @@ const routes = [
     component: () => import("@/views/mobileMenu/AboutUs.vue"),
   },
   {
-    path: "/news",
+    path: "/mobile/news-events",
+    component: () => import("@/views/mobileMenu/NewsEvents.vue"),
+  },
+  {
+    path: "/news-events/events",
+    name: "Events",
+    component: () => import("@/views/Events.vue"),
+  },
+  {
+    path: "/news-events/news",
     name: "News",
     component: () => import("@/views/News.vue"),
   },

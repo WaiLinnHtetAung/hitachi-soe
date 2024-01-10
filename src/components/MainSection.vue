@@ -5,24 +5,19 @@
         <div class="main-wrapper main-margin">
           <div class="main-title">
             <h2 class="main-h2">
-              <strong>Hitachi Soe Electric & Machinery</strong>
+              <strong>Hitachi Soe Electric & Machinery Company Limited</strong>
             </h2>
           </div>
           <div class="main-text">
-            <p>
+            <p style="text-align: justify">
               Hitachi Soe Electric & Machinery Co., Ltd. (HISEM) is one of the
               leading transformer manufacturers in Myanmar. HISEM has been
               formed by merging Hitachi technological innovation and 23 years of
               electrical transformer manufacturing experience of SEM since Oct
               2015. We contribute towards to Myanmar’s electricity
               infrastructure by integrating Hitachi’s transformer design and
-              production technologies. HISEM’s outline of business is
-              Manufacturing, Installation, Leasing, Maintenance, Repair & Sales
-              of Electrical Transformers, switchgear, and transformer related
-              accessories. We are ready to be your reliable partner to provide
-              Power and Distribution Transformer and Related Panels for your
-              business. HISEM Sales & Marketing Office and Factory are in Yangon
-              and there are branches in Nay Pyi Taw and Mandalay.
+              production technologies. &nbsp;
+              <router-link to="/about-hitachi-soe">Read more </router-link>
             </p>
           </div>
           <div class="main-image">
@@ -61,7 +56,7 @@
             />
             <a href="about-us/" class="main-image-button">Find out more &gt;</a>
             <div class="main-image-content">
-              <h4><a href="about-us/">About Hitachi Soe</a></h4>
+              <h4><a href="/about-us/company-profile">About Hitachi Soe</a></h4>
             </div>
           </div>
           <div class="main-image main-image-right event-activity">

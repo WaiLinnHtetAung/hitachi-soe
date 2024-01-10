@@ -9,9 +9,6 @@
           <img src="@/assets/images/services/preventice/banner.webp" alt="" />
         </div>
       </div>
-      <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
 
     <div class="my-5">
@@ -429,8 +426,6 @@
 </template>
 
 <script>
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
 import { onMounted, ref } from "vue";
 export default {
   setup() {
@@ -438,23 +433,6 @@ export default {
 
     onMounted(() => {
       window.scrollTo(0, 0);
-      swiper.value = new Swiper(".swiper", {
-        speed: 300,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
     });
 
     return { swiper };

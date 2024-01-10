@@ -3,15 +3,12 @@
     <h2 data-aos="fade-right" class="text-center fw-bold my-5 service-title">
       Installation Service
     </h2>
-    <div class="installation-service-carousel">
+    <div class="">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="@/assets/images/services/installation/banner.webp" alt="" />
         </div>
       </div>
-      <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
 
     <div class="my-5">
@@ -85,7 +82,7 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="installation-service-carousel ">
+      <div class="installation-swiper swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="image-container">
@@ -138,9 +135,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-pagination mt-3" id="swiper-paginate"></div> -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
     <hr />
@@ -186,7 +180,7 @@
       </div>
     </div>
     <div class="my-5 row">
-      <div class="installation-service-carousel">
+      <div class="package-swiper swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="image-container">
@@ -239,9 +233,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-pagination mt-3" id="swiper-paginate"></div> -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
     <hr />
@@ -335,58 +326,52 @@
 </template>
 
 <script>
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
 import { onMounted, ref } from "vue";
 export default {
   setup() {
-    const swiper = ref();
-    const packageSwiper = ref();
+    const installationSwiper = ref(null);
+    const packageSwiper = ref(null);
 
     onMounted(() => {
-      window.scrollTo(0, 0);
-      swiper.value = new Swiper(".swiper", {
-        speed: 300,
-        slidesPerView: "3",
+      installationSwiper.value = new Swiper(".installation-swiper", {
+        slidesPerView: 1,
         spaceBetween: 20,
-        loop: true,
+        speed: 1000,
         autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
+          delay: 500,
         },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        breakpoints: {
+          700: {
+            slidesPerView: 2,
+          },
+
+          1100: {
+            slidesPerView: 3,
+          },
         },
       });
 
       packageSwiper.value = new Swiper(".package-swiper", {
-        speed: 300,
-        slidesPerView: "3",
-        spaceBetween: 30,
+        speed: 1000,
         loop: true,
+        spaceBetween: 20,
         autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
+          delay: 500,
         },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        slidesPerView: 1,
+        breakpoints: {
+          700: {
+            slidesPerView: 2,
+          },
+
+          1100: {
+            slidesPerView: 3,
+          },
         },
       });
     });
 
-    return { swiper, packageSwiper };
+    return { installationSwiper, packageSwiper };
   },
 };
 </script>

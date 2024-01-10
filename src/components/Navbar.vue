@@ -123,14 +123,18 @@
 
   <nav class="nav2" :class="{ fix: isNavFix }">
     <div class="nav2-wraper">
-      <a v-if="!isToggle" class="navbar-brand" href="/">
+      <a
+        v-if="!isToggle"
+        class="navbar-brand d-flex align-items-center gap-1 text-wrap"
+        href="/"
+      >
         <img
           class="logo-text"
           src="@/assets/images/favicon.png"
           height="50"
           alt="Hitachi, Ltd."
         />
-        Hitachi Soe Electric & Machinery
+        <span>Hitachi Soe Electric & Machinery Company Limited</span>
       </a>
 
       <div
@@ -386,20 +390,48 @@
           >
           <i class="bx bx-chevron-right mobile-arrow"></i>
         </div>
+
         <div
-          class="mobile-menu"
+          class="mobile-menu news-events"
           :class="{ 'menu-animate': isToggle }"
           @click="isToggle = false"
         >
-          <router-link
-            to="/news"
-            :class="{
-              'route-active': currentRoute === '/news',
-            }"
-            >News</router-link
+          <router-link class="mobile-menu-link" to="/mobile/news-events"
+            >News & Events</router-link
           >
+          <router-link
+            to="#"
+            class="news-events desk-menu-link"
+            :class="{
+              'route-active': currentRoute.substring(0, 5) === '/news',
+            }"
+            >News & Events
+            <div class="dropdown">
+              <h2>
+                <i class="fa-solid fa-arrow-right-long me-2 text-danger"></i
+                >News & Events
+              </h2>
+              <div class="menu-item">
+                <div class="news-events-card">
+                  <img src="@/assets/images/news/news.jpg" alt="" />
+                  <div class="link">
+                    <i class="fa-solid fa-caret-right"></i>
+                    <router-link to="/news-events/news">News</router-link>
+                  </div>
+                </div>
+                <div class="news-events-card">
+                  <img src="@/assets/images/news/events.jpg" alt="" />
+                  <div class="link">
+                    <i class="fa-solid fa-caret-right"></i>
+                    <router-link to="/news-events/events">Events</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </router-link>
           <i class="bx bx-chevron-right mobile-arrow"></i>
         </div>
+
         <div
           class="mobile-menu"
           :class="{ 'menu-animate': isToggle }"
@@ -572,6 +604,7 @@ import { onMounted, onUpdated, ref } from "vue";
 import { useRouter } from "vue-router";
 import "@/assets/css/aboutus.css";
 import "@/assets/css/career.css";
+import "@/assets/css/news_events.css";
 export default {
   setup() {
     let router = useRouter();
@@ -925,7 +958,7 @@ a {
   transform: translateY(0) translateX(-50%);
   opacity: 0;
   pointer-events: none;
-  z-index: 99;
+  z-index: 99999;
   background-color: rgba(20, 20, 20, 0.9);
   display: flex;
   gap: 60px;
@@ -975,6 +1008,15 @@ a {
   font-weight: bolder;
 }
 
+@media (max-width: 1860px) {
+  .nav1-wraper {
+    padding: 0 10%;
+  }
+  .nav2-wraper {
+    padding: 9px 10% 0px;
+  }
+}
+
 @media (max-width: 1620px) {
   .product-services .dropdown {
     position: absolute;
@@ -982,7 +1024,17 @@ a {
   }
 }
 
-@media (min-width: 900px) and (max-width: 1500px) {
+@media (max-width: 1610px) {
+  .nav1-wraper {
+    padding: 5px 8%;
+  }
+
+  .nav2-wraper {
+    padding: 9px 8% 0px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1540px) {
   /* --------- top navbar ------- */
   .navbar {
     width: 100%;
@@ -991,10 +1043,6 @@ a {
 
   .nav1 .navbar-brand {
     margin-top: -8px;
-  }
-
-  .nav1-wraper {
-    padding: 5px 13%;
   }
 
   .navbar-brand img {
@@ -1080,11 +1128,9 @@ a {
   }
 
   .nav2-wraper {
-    padding: 4px 13% 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 4px 8% 0px;
   }
+
   .nav2 .navbar-brand img {
     width: 20px;
     height: auto;
@@ -1110,10 +1156,28 @@ a {
   }
 }
 
+@media (max-width: 1450px) {
+  .nav1-wraper {
+    padding: 4px 10% 0px;
+  }
+  .nav2-wraper {
+    padding: 4px 10% 0px;
+  }
+}
+
 @media (max-width: 1410px) {
   .product-services .dropdown {
     position: absolute;
     width: 80%;
+  }
+}
+
+@media (max-width: 1405px) {
+  .nav1-wraper {
+    padding: 4px 7% 0px;
+  }
+  .nav2-wraper {
+    padding: 4px 7% 0px;
   }
 }
 
@@ -1124,13 +1188,22 @@ a {
   }
 }
 
+@media (max-width: 1300px) {
+  .nav1-wraper {
+    padding: 4px 5% 0px;
+  }
+  .nav2-wraper {
+    padding: 4px 5% 0px;
+  }
+}
+
 @media (max-width: 1260px) {
   /* ------top navbar ---------- */
   .nav1 {
     z-index: 1;
   }
   .nav1-wraper {
-    padding: 0 1%;
+    padding: 4px 1% 0px;
   }
 
   .languages {
@@ -1166,19 +1239,47 @@ a {
     width: 95%;
   }
   .nav2-wraper {
-    padding: 0 1%;
+    padding: 4px 1% 0px;
   }
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1142px) {
+  .nav1-wraper {
+    padding: 4px 2% 0px;
+  }
+  /* main navbar */
+  .nav2 {
+    height: auto;
+    padding: 1px 15px;
+  }
+
+  .nav2-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .mobile-menu {
+    margin-top: 7px;
+    padding-bottom: 16px;
+  }
+
+  .menu-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: -2px;
+  }
+
   .product-services .dropdown {
     position: absolute;
     width: 110%;
+    top: 93%;
     gap: 30px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 896px) {
   /* top navbar */
   .navbar {
     max-height: 44px;
@@ -1252,28 +1353,8 @@ a {
     border: none;
     padding-left: 20px;
   }
-
-  /* main navbar */
-  .nav2 {
-    height: auto;
-    padding: 1px 15px;
-  }
-  .nav2-wraper {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5rem;
-  }
-
-  .mobile-menu {
-    margin-top: 7px;
-    padding-bottom: 16px;
-  }
-
-  .menu-wraper {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: -2px;
+  .product-services .dropdown {
+    top: 66%;
   }
 }
 
@@ -1301,6 +1382,7 @@ a {
 
   .nav1-wraper {
     padding-right: 0;
+    padding-top: 0;
     margin-left: 10px;
   }
 

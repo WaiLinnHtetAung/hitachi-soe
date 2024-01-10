@@ -213,7 +213,7 @@ export default createStore({
     newsDetail: [],
   },
   getters: {
-    getNews: (state) => state.news,
+    getNews: (state) => state.news.sort((a, b) => b.id - a.id),
     getNewsDetail: (state) => state.newsDetail,
   },
   mutations: {

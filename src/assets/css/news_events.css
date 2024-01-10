@@ -1,6 +1,6 @@
 /* ======== menu dropdown ========= */
 
-.menu-wraper .about-us .dropdown {
+.menu-wraper .news-events .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -17,123 +17,107 @@
   visibility: hidden;
 }
 
-.menu-wraper .about-us:hover .dropdown {
+.menu-wraper .news-events:hover .dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.about-us .dropdown h2 {
+.news-events .dropdown h2 {
   color: #fff;
   font-size: 18px;
 }
 
-.about-us .menu-item {
+.news-events .menu-item {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
-.about-us .menu-item .about-card {
-  width: 23%;
+.news-events .menu-item .news-events-card {
+  width: 24%;
   background-color: #fff;
 }
 
-.about-us .dropdown .menu-item img {
+.news-events .dropdown .menu-item img {
   width: 100%;
   height: 0;
   object-fit: cover;
   transition: 0.3s ease;
 }
 
-.about-us:hover .dropdown .menu-item img {
+.news-events:hover .dropdown .menu-item img {
   height: 200px;
 }
 
-.about-us .about-card .link {
+.news-events .news-events-card .link {
   display: flex;
   align-items: center;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.about-us .about-card .link i {
+.news-events .news-events-card .link i {
   color: var(--btn-color);
   font-size: 18px;
 }
 
-.about-us .about-card .link a {
+.news-events .news-events-card .link a {
   font-size: 14px !important;
   font-weight: bold !important;
 }
 
-.about-us .about-card .link a:hover {
+.news-events .news-events-card .link a:hover {
   background-color: #fff !important;
   color: var(--btn-color) !important;
 }
 
 @media (max-width: 1500px) {
-  .menu-wraper .about-us .dropdown {
+  .menu-wraper .news-events .dropdown {
     flex-direction: column;
     gap: 30px;
     padding: 30px 13% 50px;
   }
-  .about-us .dropdown h2 {
+  .news-events .dropdown h2 {
     font-size: 18px;
   }
-  .about-us .menu-item {
+  .news-events .menu-item {
     gap: 20px;
   }
-  .about-us .menu-item .about-card {
+  .news-events .menu-item .news-events-card {
     width: 23%;
   }
-  .about-us:hover .dropdown .menu-item img {
+  .news-events:hover .dropdown .menu-item img {
     height: 160px;
   }
 }
 
-@media (max-width: 1142px) {
-  .menu-wraper .about-us .dropdown {
-    top: 93%;
-  }
-}
-
 @media (max-width: 1260px) {
-  .menu-wraper .about-us .dropdown {
+  .menu-wraper .news-events .dropdown {
     flex-direction: column;
     gap: 30px;
     padding: 30px 1% 50px;
   }
-  .about-us .dropdown h2 {
+  .news-events .dropdown h2 {
     font-size: 18px;
   }
-  .about-us .menu-item {
+  .news-events .menu-item {
     gap: 10px;
   }
-  .about-us .menu-item .about-card {
+  .news-events .menu-item .news-events-card {
     width: 24%;
   }
-  .about-us:hover .dropdown .menu-item img {
+  .news-events:hover .dropdown .menu-item img {
     height: 180px;
   }
-  .about-us .about-card .link i {
+  .news-events .news-events-card .link i {
     font-size: 14px;
   }
-  .about-us .about-card .link a {
+  .news-events .news-events-card .link a {
     font-size: 12px !important;
   }
 }
 
 @media (max-width: 990px) {
-  .about-us:hover .dropdown .menu-item img {
+  .news-events:hover .dropdown .menu-item img {
     height: 150px;
-  }
-  .about-us .menu-item .about-card {
-    width: 30%;
-  }
-}
-
-@media (max-width: 896px) {
-  .menu-wraper .about-us .dropdown {
-    top: 68%;
   }
 }

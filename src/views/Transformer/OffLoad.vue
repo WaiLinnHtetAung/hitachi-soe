@@ -47,8 +47,8 @@ import Kv33Four from "../../components/offload/Kv33Four";
 import Kv11Six from "../../components/offload/Kv11Six";
 import Kv11Four from "../../components/offload/Kv11Four";
 import { onMounted, ref } from "vue";
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
+// import Swiper from "swiper/bundle";
+// import "swiper/css/bundle";
 export default {
   components: {
     Kv33Four,
@@ -59,23 +59,23 @@ export default {
     const swiper = ref();
 
     onMounted(() => {
-      swiper.value = new Swiper(".swiper", {
-        speed: 300,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+      // swiper.value = new Swiper(".swiper", {
+      //   speed: 300,
+      //   loop: true,
+      //   autoplay: {
+      //     delay: 5000,
+      //     disableOnInteraction: false,
+      //   },
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //     clickable: true,
+      //     type: "bullets",
+      //   },
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      // });
     });
 
     return { swiper };
