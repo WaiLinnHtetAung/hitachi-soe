@@ -20,10 +20,14 @@
           }}</span
         >
       </div>
-      <div
-        class="images d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5"
-      >
-        <img v-for="(item, i) in newsDetail.img" :key="i" :src="item" alt="" />
+      <div class="row mt-5">
+        <div
+          class="col-12 col-md-6 mb-3"
+          v-for="(item, i) in newsDetail.img"
+          :key="i"
+        >
+          <img class="w-100 h-100" :src="item" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -72,10 +76,6 @@ export default {
 @media (max-width: 700px) {
   .news-detail-container h2 {
     font-size: 22px;
-  }
-
-  .news-detail .images img {
-    width: 100%;
   }
 }
 </style>

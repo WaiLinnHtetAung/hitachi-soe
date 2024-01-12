@@ -336,7 +336,7 @@ export default {
       installationSwiper.value = new Swiper(".installation-swiper", {
         slidesPerView: 1,
         spaceBetween: 20,
-        speed: 1000,
+        speed: 1500,
         autoplay: {
           delay: 500,
         },
@@ -352,8 +352,7 @@ export default {
       });
 
       packageSwiper.value = new Swiper(".package-swiper", {
-        speed: 1000,
-        loop: true,
+        speed: 1500,
         spaceBetween: 20,
         autoplay: {
           delay: 500,

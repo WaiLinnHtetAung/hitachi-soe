@@ -4,6 +4,15 @@ export default createStore({
   state: {
     news: [
       {
+        id: 0,
+        title: "Technical Collaboration Agreement  in Sept 2012 at Sedona.",
+        day: "01",
+        month: "Sept",
+        year: "2012",
+        type: "event",
+        img: [require("@/assets/images/news/25.png")],
+      },
+      {
         id: 1,
         title:
           "Asean Outstanding Engineering Achievement Award for the Year 2015 From 23~26 Nov 2015 in Penang, Malaysia.",
@@ -184,10 +193,7 @@ export default createStore({
         month: "Oct",
         year: "2023",
         type: "event",
-        img: [
-          require("@/assets/images/news/21.png"),
-          require("@/assets/images/news/22.png"),
-        ],
+        img: [require("@/assets/images/news/22.png")],
       },
       {
         id: 19,
@@ -207,6 +213,89 @@ export default createStore({
         year: "2023",
         type: "csr",
         img: [require("@/assets/images/news/24.png")],
+      },
+      {
+        id: 21,
+        title:
+          "Hitachi Soe Electric & Machinery Co., Ltd. participated in Mandalay Power and Machinery Show 2023 at Mandalay Convention Center, Mandalay from 8th to 10th December 2023.",
+        day: "08",
+        month: "Dec",
+        year: "2023",
+        type: "csr",
+        img: [
+          require("@/assets/images/news/26.png"),
+          require("@/assets/images/news/27.png"),
+        ],
+      },
+      {
+        id: 22,
+        title:
+          "Hitachi Soe Electric & Machinery Co, Ltd. contributed gifts with other companies at MBA Programme Graduation Dinner on 29 Dec 2023 at Melia Hotel.",
+        day: "29",
+        month: "Dec",
+        year: "2023",
+        type: "event",
+        img: [
+          require("@/assets/images/news/28.png"),
+          require("@/assets/images/news/29.png"),
+          require("@/assets/images/news/30.png"),
+        ],
+      },
+      {
+        id: 23,
+        title:
+          "Sending 2nd Batch of engineers and skilled worker as Trainees to Nakajo Factory for one year on Dec 2023",
+        day: "29",
+        month: "Dec",
+        year: "2023",
+        type: "event",
+        img: [
+          require("@/assets/images/news/31.png"),
+          require("@/assets/images/news/32.png"),
+        ],
+      },
+      {
+        id: 24,
+        title:
+          "ASEAN Young Talent Nexus FY 2023 in Japan from 5th Dec to 8th Dec 2023.",
+        day: "05",
+        month: "Dec",
+        year: "2023",
+        type: "event",
+        img: [
+          require("@/assets/images/news/33.png"),
+          require("@/assets/images/news/34.png"),
+          require("@/assets/images/news/35.png"),
+          require("@/assets/images/news/36.png"),
+        ],
+      },
+      {
+        id: 25,
+        title:
+          "Donation for Mocha Cyclone's impact areas in Rakhine and Chin State on 15th June 2023 and supporting in restoration project in affective areas.",
+        day: "15",
+        month: "June",
+        year: "2023",
+        type: "event",
+        img: [
+          require("@/assets/images/news/37.png"),
+          require("@/assets/images/news/38.png"),
+          require("@/assets/images/news/39.png"),
+          require("@/assets/images/news/40.png"),
+        ],
+      },
+      {
+        id: 26,
+        title: "76th Myanmar Independent Day Tournament at HISEM Factory",
+        day: "04",
+        month: "Jan",
+        year: "2024",
+        type: "event",
+        img: [
+          require("@/assets/images/news/41.png"),
+          require("@/assets/images/news/42.png"),
+          require("@/assets/images/news/43.png"),
+        ],
       },
     ],
 

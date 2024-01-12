@@ -116,8 +116,20 @@
   }
 }
 
+@media (max-width: 1142px) {
+  .menu-wraper .news-events .dropdown {
+    top: 93%;
+  }
+}
+
 @media (max-width: 990px) {
   .news-events:hover .dropdown .menu-item img {
     height: 150px;
+  }
+}
+
+@media (max-width: 896px) {
+  .menu-wraper .news-events .dropdown {
+    top: 68%;
   }
 }

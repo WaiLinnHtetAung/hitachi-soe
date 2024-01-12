@@ -67,7 +67,9 @@
             />
             <a href="events/" class="main-image-button">Find out more &gt;</a>
             <div class="main-image-content">
-              <h4><a href="events/">Events &amp; Activities</a></h4>
+              <h4>
+                <a href="/news-events/events/">Events &amp; Activities</a>
+              </h4>
             </div>
           </div>
         </div>

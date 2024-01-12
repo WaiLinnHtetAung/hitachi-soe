@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useStore } from "vuex";
 
 export default {
@@ -81,6 +81,10 @@ export default {
     const store = useStore();
 
     const news = computed(() => store.getters["getNews"]);
+
+    onMounted(() => {
+      scrollTo(0, 0);
+    });
 
     return { type, news };
   },
@@ -128,7 +132,7 @@ export default {
 }
 
 .news .news-info a:hover {
-  background: rgb(56, 56, 173);
+  background: rgb(197, 70, 70);
 }
 
 .news .news-type span {

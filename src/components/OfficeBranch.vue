@@ -1,9 +1,9 @@
 <template>
-  <div class="information container">
+  <div class="information">
     <div class="information-row row">
       <section id="portfolio" class="portfolio">
         <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-3 col-md-6 portfolio-item mb-3 filter-app">
             <div class="portfolio-wrap">
               <img src="@/assets/images/ygn.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -13,7 +13,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-3 col-md-6 portfolio-item mb-3 filter-web">
             <div class="portfolio-wrap">
               <img src="@/assets/images/mdy.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -23,11 +23,25 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap portfolio-last-pic">
+          <div class="col-lg-3 col-md-6 portfolio-item mb-3 filter-web">
+            <div class="portfolio-wrap">
               <img src="@/assets/images/npt.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Naypyitaw</h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item mb-3 filter-web">
+            <div class="portfolio-wrap">
+              <img
+                src="@/assets/images/sale_office.jpg"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="portfolio-info">
+                <h4>Sale Office</h4>
                 <p></p>
               </div>
             </div>
@@ -47,12 +61,12 @@ export default {};
   position: relative;
   margin-top: -40px;
   z-index: 3 !important;
-  margin-bottom: 50px;
+  padding: 0px 10%;
 }
 
 .portfolio-container {
   background: rgba(255, 255, 255, 0.6);
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 .portfolio .portfolio-item {
@@ -65,6 +79,11 @@ export default {};
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.85);
+}
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 200px;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -161,14 +180,46 @@ export default {};
   right: 15px;
 }
 
-@media (min-width: 450px) and (max-width: 850px) {
-  .portfolio-last-pic {
-    position: absolute;
-    left: 140px;
-    top: 30px;
+@media (max-width: 1600px) {
+  .information {
+    padding: 0px 5%;
   }
+}
+
+@media (max-width: 1250px) {
+  .information {
+    padding: 0px 3%;
+  }
+
+  .portfolio .portfolio-wrap img {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 850px) {
   .main-container .main-margin {
     margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    width: 80%;
+    margin: 0px auto;
+  }
+  .portfolio .portfolio-wrap img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .information {
+    padding: 0px;
+  }
+  .portfolio-container {
+    width: 95%;
   }
 }
 
@@ -180,10 +231,6 @@ export default {};
     margin-bottom: 20px !important;
   }
 
-  .portfolio-container {
-    width: 320px;
-    margin: 0 auto;
-  }
   .main-container .main-margin {
     margin: 0 auto !important;
   }
