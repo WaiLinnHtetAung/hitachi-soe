@@ -13,28 +13,12 @@
   padding: 10px 0px;
 }
 
-.panel-section .hybrid-vcb {
-  width: 20%;
-}
-
-.panel-section .img img {
-  animation: scale 2s ease-in-out infinite;
+.panel-section .hybrid-vcb img {
+  width: 80%;
 }
 
 .panel-section table td {
   padding: 15px;
-}
-
-@keyframes scale {
-  0% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(10px);
-  }
 }
 
 @media (max-width: 1500px) {

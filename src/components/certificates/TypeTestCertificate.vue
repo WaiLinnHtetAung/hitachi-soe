@@ -201,12 +201,18 @@
             <div class="col-6">: 20TC100008</div>
           </div>
           <div class="row mb-3">
-            <div class="col-5">Test Object</div>
-            <div class="col-6 lh-base">: Metal Enclosed Switchgear</div>
+            <div class="col-5">Ratings</div>
+            <div class="col-6 lh-base">
+              :3 Phases 12KV 630A & 1250A 25KA 50Hz Metal Enclosed Switchgear
+              Panel
+            </div>
           </div>
           <div class="row mb-3">
             <div class="col-5">Accreditation Body</div>
-            <div class="col-6 lh-base">: KIRI (Korea)</div>
+            <div class="col-6 lh-base">
+              : Korea Electrotchnology Research Institute (KERI) Republic of
+              Korea
+            </div>
           </div>
         </div>
 
@@ -224,14 +230,18 @@
             <div class="col-lg-8 col-md-8">: 20TC100008</div>
           </div>
           <div class="row" data-aos="flip-down">
-            <div class="col-lg-4 col-md-4">Test Object</div>
+            <div class="col-lg-4 col-md-4">Ratings</div>
             <div class="col-lg-8 col-md-8 lh-base">
-              : Metal Enclosed Switchgear
+              :3 Phases 12KV 630A & 1250A 25KA 50Hz Metal Enclosed Switchgear
+              Panel
             </div>
           </div>
           <div class="row" data-aos="flip-down">
             <div class="col-lg-4 col-md-4">Accreditation Body</div>
-            <div class="col-lg-7 col-md-8">: KIRI (Korea)</div>
+            <div class="col-lg-7 col-md-8">
+              : Korea Electrotchnology Research Institute (KERI) Republic of
+              Korea
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,8 @@ import "@/assets/css/style.css";
 import "@/assets/css/panel.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import VueImageZoomer from "vue-image-zoomer";
+import "vue-image-zoomer/dist/style.css";
 
 AOS.init({
   delay: 50,
@@ -15,4 +17,4 @@ AOS.init({
   mirror: true,
 });
 
-createApp(App).use(store).use(router).mount("#app");
+createApp(App).use(store).use(VueImageZoomer).use(router).mount("#app");

@@ -1,12 +1,8 @@
 <template>
   <div class="panel-section">
     <h2>Low Voltage Capacitor Bank</h2>
-    <div class="img">
-      <img
-        class="hybrid-vcb"
-        src="@/assets/images/panels/low_voltage.png"
-        alt=""
-      />
+    <div class="img hybrid-vcb">
+      <vue-image-zoomer regular="/panels/low_voltage.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

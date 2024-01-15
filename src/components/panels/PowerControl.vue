@@ -1,12 +1,8 @@
 <template>
   <div class="panel-section">
     <h2>OLTC Control Panel</h2>
-    <div class="img">
-      <img
-        class="hybrid-vcb"
-        src="@/assets/images/panels/power_control.png"
-        alt=""
-      />
+    <div class="img hybrid-vcb">
+      <vue-image-zoomer regular="/panels/power_control.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

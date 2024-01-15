@@ -195,7 +195,7 @@
                   </li>
                   <li>
                     <router-link to="/products/panels/panel-with-drop-out-fuse">
-                      Drop Out Fuse / Encosed Cut Out Fuse
+                      LA - DS & COF/DOF Panel
                     </router-link>
                   </li>
                   <li>
@@ -259,7 +259,7 @@
               </div>
               <div class="panel product">
                 <ul>
-                  <li class="mb-2 header">SERVICE TYPES</li>
+                  <li class="mb-2 header">OUR SERVICES</li>
                   <li>
                     <router-link to="/products/services/installation-service"
                       >Installation Service</router-link

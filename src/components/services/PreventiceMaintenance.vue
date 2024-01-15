@@ -12,6 +12,22 @@
     </div>
 
     <div class="my-5">
+      <h3 class="mt-5 mb-4 fw-bold">Available Services</h3>
+      <ul data-aos="fade-up">
+        <li>Transformer (upto 66 kV)</li>
+        <li>Switchgear Panel (upto 33 kV)</li>
+      </ul>
+    </div>
+
+    <div class="my-5">
+      <h3 class="mt-5 mb-4 fw-bold">Preventice Maintenance Service Process</h3>
+      <ol>
+        <li class="text-muted">Survey (Online/Onsite)</li>
+        <li class="text-muted">Submit Quotation</li>
+      </ol>
+    </div>
+
+    <div class="my-5">
       <h3 class="mt-5 mb-3 fw-bold">Purpose</h3>
       <p>
         The primary purpose of transformer maintenance is to ensure the internal
@@ -25,7 +41,7 @@
     </div>
 
     <div class="my-5">
-      <h3 class="mt-5 mb-3 fw-bold">One Time Inspection</h3>
+      <h3 class="mt-5 mb-3 fw-bold text-center">One Time Inspection</h3>
       <p class="fw-bold">Scope of Work ;</p>
       <ul class="sub-service">
         <li>Cleaning Process to overall</li>
@@ -44,7 +60,7 @@
     </div>
 
     <div class="my-5">
-      <h3 class="mt-5 mb-3 fw-bold">Yearly Maintenance Contract</h3>
+      <h3 class="mt-5 mb-4 fw-bold text-center">Yearly Maintenance Contract</h3>
       <p>
         HISEM will provide the Two Time Maintenance within Contract year if make
         Yearly Maintenance Contract. Customer no need to give service charges
@@ -67,23 +83,6 @@
       </ul>
     </div>
 
-    <div class="my-5">
-      <h3 class="mt-5 mb-4 fw-bold">Available Services</h3>
-      <ul data-aos="fade-up">
-        <li>Transformer (upto 66 kV)</li>
-        <li>Switchgear Panel (upto 33 kV)</li>
-      </ul>
-    </div>
-
-    <div class="my-5">
-      <h3 class="mt-5 mb-4 fw-bold">Preventice Maintenance Service Process</h3>
-      <ol>
-        <li class="text-muted">Survey (Online/Onsite)</li>
-        <li class="text-muted">Submit Quotation</li>
-      </ol>
-    </div>
-    <br />
-
     <h4
       class="mt-5 fw-bold"
       style="border-bottom: 2px solid rgb(211, 62, 62)"
@@ -94,10 +93,10 @@
 
     <!-- PMS-1. Maintenance & Inspection  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
+      <!-- <img src="@/assets/images/services/aftersale/icon.png" alt="" /> -->
       <h4 class="fw-bold">PMS-1. Maintenance & Inspection</h4>
     </div>
 
@@ -113,7 +112,7 @@
         : Thilawa SEZ-A, S.P Pet Pack Factory
       </div>
     </div>
-    <div class="row my-5">
+    <div class="row my-5 experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/preventice/PMS1/1.jpg')"
@@ -167,10 +166,9 @@
 
     <!-- PMS-2. Maintenance & Inspection   -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
       <h4 class="fw-bold">PMS-2. Maintenance & Inspection</h4>
     </div>
 
@@ -186,7 +184,7 @@
         : Thilawa SEZ-B, MJTD Factory
       </div>
     </div>
-    <div class="row my-5">
+    <div class="row my-5 experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/preventice/PMS2/1.jpg')"
@@ -240,10 +238,9 @@
 
     <!-- PMS-3. Maintenance & Inspection  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
       <h4 class="fw-bold">PMS-3. Maintenance & Inspection</h4>
     </div>
 
@@ -259,7 +256,7 @@
         : Mingalar Taung Nyunt Township, Makro Supermarket (Sett San)
       </div>
     </div>
-    <div class="my-5 row">
+    <div class="my-5 row experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/preventice/PMS3/1.jpg')"
@@ -337,10 +334,9 @@
 
     <!-- PMS-4. Maintenance & Inspection  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
       <h4 class="fw-bold">PMS-4. Maintenance & Inspection</h4>
     </div>
 
@@ -356,7 +352,7 @@
         : Thilawa SEZ-B, Kubota Factory
       </div>
     </div>
-    <div class="my-5 row">
+    <div class="my-5 row experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/preventice/PMS4/1.jpg')"
@@ -478,6 +474,14 @@ export default {
 
 .preventice-service p {
   font-size: 18px;
+}
+
+.experience img {
+  transition: 0.3s ease;
+}
+
+.experience img:hover {
+  transform: translateY(-15px) translateX(10px) !important;
 }
 
 @media (max-width: 1500px) {

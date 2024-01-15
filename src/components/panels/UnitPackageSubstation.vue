@@ -2,7 +2,7 @@
   <div class="panel-section">
     <h2>Unit Package Substation</h2>
     <div class="img">
-      <img src="@/assets/images/panels/unit_package.png" alt="" />
+      <vue-image-zoomer regular="/panels/unit_package.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

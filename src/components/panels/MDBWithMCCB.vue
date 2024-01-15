@@ -2,7 +2,7 @@
   <div class="panel-section">
     <h2>Main Distribution Panel with MCCB</h2>
     <div class="img">
-      <img src="@/assets/images/panels/mdb_with_mccb.png" alt="" />
+      <vue-image-zoomer regular="/panels/mdb_with_mccb.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

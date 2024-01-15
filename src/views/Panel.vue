@@ -3,7 +3,7 @@
     <UnitPackageSubstation></UnitPackageSubstation>
   </div>
   <div v-if="slug == 'panel-with-drop-out-fuse'">
-    <PanelWithDropOutFuse></PanelWithDropOutFuse>
+    <CofDof></CofDof>
   </div>
   <div v-if="slug == 'hybrid-vcb-switchgear-panel'">
     <HybridVCBSwitchgearPanel></HybridVCBSwitchgearPanel>
@@ -38,8 +38,8 @@
 </template>
 
 <script>
+import CofDof from "../components/panels/CofDof";
 import HybridVCBSwitchgearPanel from "../components/panels/HybridVCBSwitchgearPanel";
-import PanelWithDropOutFuse from "../components/panels/PanelWithDropOutFuse";
 import UnitPackageSubstation from "../components/panels/UnitPackageSubstation";
 import ACBPanel from "@/components/panels/ACBPanel.vue";
 import ATSPanel from "@/components/panels/ATSPanel.vue";
@@ -53,8 +53,8 @@ import MeterPanel from "@/components/panels/MeterPanel.vue";
 import { onMounted } from "vue";
 export default {
   components: {
+    CofDof,
     HybridVCBSwitchgearPanel,
-    PanelWithDropOutFuse,
     UnitPackageSubstation,
     ACBPanel,
     ATSPanel,

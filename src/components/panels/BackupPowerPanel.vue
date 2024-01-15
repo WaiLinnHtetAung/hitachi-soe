@@ -2,7 +2,7 @@
   <div class="panel-section">
     <h2>OLTC Backup Power Panel</h2>
     <div class="img">
-      <img src="@/assets/images/panels/backup_power.png" alt="" />
+      <vue-image-zoomer regular="/panels/backup_power.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

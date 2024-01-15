@@ -2,7 +2,7 @@
   <div class="panel-section">
     <h2>ATS Panel</h2>
     <div class="img">
-      <img src="@/assets/images/panels/ats.png" alt="" />
+      <img src="/panels/ats.png" alt="" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

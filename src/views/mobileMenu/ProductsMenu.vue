@@ -115,62 +115,62 @@ export default {
 
     let panels = [
       {
-        img: require("@/assets/images/panels/unit_package.png"),
+        img: require("/public/panels/unit_package.png"),
         title: "Unit Package Substation",
         link: "/products/panels/unit-package-substation",
       },
       {
-        img: require("@/assets/images/panels/panel_with_drop_out_fuse.png"),
+        img: require("/public/panels/panel_with_drop_out_fuse.png"),
         title: "Drop Out Fuse / Encosed Cut Out Fuse",
         link: "/products/panels/panel-with-drop-out-fuse",
       },
       {
-        img: require("@/assets/images/panels/hybrid_vcb.png"),
+        img: require("/public/panels/hybrid_vcb.png"),
         title: "Hybrid VCB Switchgear Panel",
         link: "/products/panels/hybrid-vcb-switchgear-panel",
       },
       {
-        img: require("@/assets/images/panels/ACB.jpg"),
+        img: require("/public/panels/ACB.jpg"),
         title: "ACB Panel",
         link: "/products/panels/acb-panel",
       },
       {
-        img: require("@/assets/images/panels/ats.png"),
+        img: require("/public/panels/ats.png"),
         title: "ATS Panel",
         link: "/products/panels/ats-panel",
       },
       {
-        img: require("@/assets/images/panels/mdb_with_mccb.png"),
+        img: require("/public/panels/mdb_with_mccb.png"),
         title: "Main Distribution Panel with MCCB",
         link: "/products/panels/mdb-mccb",
       },
       {
-        img: require("@/assets/images/panels/mdb_with_cb.png"),
+        img: require("/public/panels/mdb_with_cb.png"),
         title: "Main Distribution Panel with CB",
         link: "/products/panels/mdb-cb",
       },
       {
-        img: require("@/assets/images/panels/low_voltage.png"),
+        img: require("/public/panels/low_voltage.png"),
         title: "Low Voltage Capacitor Bank",
         link: "/products/panels/low-voltage-cb",
       },
       {
-        img: require("@/assets/images/panels/backup_power.png"),
+        img: require("/public/panels/backup_power.png"),
         title: "OLTC Backup Power Panel",
         link: "/products/panels/backup-power-panel",
       },
       {
-        img: require("@/assets/images/panels/power_control.png"),
+        img: require("/public/panels/power_control.png"),
         title: "OLTC Control Panel",
         link: "/products/panels/power-control",
       },
       {
-        img: require("@/assets/images/panels/marshal-2.png"),
+        img: require("/public/panels/marshal-2.png"),
         title: "Marshalling Kiosk",
         link: "/products/panels/marshalling-kiosk",
       },
       {
-        img: require("@/assets/images/panels/meter_panel.png"),
+        img: require("/public/panels/meter_panel.png"),
         title: "kWh Meter Panel",
         link: "/products/panels/meter-panel",
       },

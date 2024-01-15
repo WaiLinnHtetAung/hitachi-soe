@@ -2,7 +2,7 @@
   <div class="panel-section">
     <h2>LA, DS Panel with Drop Out Fuse / Encosed Cut Out Fuse</h2>
     <div class="img">
-      <img src="@/assets/images/panels/panel_with_drop_out_fuse.png" alt="" />
+      <vue-image-zoomer regular="/panels/panel_with_drop_out_fuse.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

@@ -2,7 +2,7 @@
   <div class="panel-section">
     <h2>Main Distribution Panel With Capacitor Bank</h2>
     <div class="img">
-      <img src="@/assets/images/panels/mdb_with_cb.png" alt="" />
+      <vue-image-zoomer regular="/panels/mdb_with_cb.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

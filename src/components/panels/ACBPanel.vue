@@ -1,8 +1,8 @@
 <template>
   <div class="panel-section">
-    <h2>ABC Panel</h2>
+    <h2>ACB Panel</h2>
     <div class="img">
-      <img src="@/assets/images/panels/ACB.jpg" alt="" />
+      <vue-image-zoomer regular="/panels/ACB.jpg" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

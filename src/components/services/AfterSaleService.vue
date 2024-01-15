@@ -36,10 +36,10 @@
 
     <!-- AFS-1. 66 kV OLTC Maintenance  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
+      <!-- <img src="@/assets/images/services/aftersale/icon.png" alt="" /> -->
       <h4 class="fw-bold">AFS-1. 66 kV OLTC Maintenance</h4>
     </div>
 
@@ -55,7 +55,7 @@
         : Ayerwady Division, Myaung Mya 66 kV Substation
       </div>
     </div>
-    <div class="row my-5">
+    <div class="row my-5 experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/aftersale/afs166/1.jpg')"
@@ -109,10 +109,9 @@
 
     <!-- 2. 33 kV OLTC Maintenance  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
       <h4 class="fw-bold">AFS-2. 33 kV OLTC Maintenance</h4>
     </div>
 
@@ -129,7 +128,7 @@
         Power Plant
       </div>
     </div>
-    <div class="row my-5">
+    <div class="row my-5 experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/aftersale/afs233/1.jpg')"
@@ -183,10 +182,9 @@
 
     <!-- 3. 33 kV OLTC Maintenance  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
       <h4 class="fw-bold">AFS-3. 33 kV OLTC Maintenance</h4>
     </div>
 
@@ -202,10 +200,9 @@
 
     <!-- 4. 11 kV OLTC Maintenance  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 my-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/aftersale/icon.png" alt="" />
       <h4 class="fw-bold">AFS-4. 11 kV OLTC Maintenance</h4>
     </div>
 
@@ -222,7 +219,7 @@
         (CHIYODA & PUBLIC WORK Co., Ltd)
       </div>
     </div>
-    <div class="my-5 row">
+    <div class="my-5 row experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/aftersale/afs411/1.jpg')"
@@ -302,6 +299,14 @@ export default {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 18px;
+}
+
+.experience img {
+  transition: 0.3s ease;
+}
+
+.experience img:hover {
+  transform: translateY(-15px) translateX(10px) !important;
 }
 
 @media (max-width: 1500px) {

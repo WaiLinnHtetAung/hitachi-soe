@@ -20,6 +20,11 @@
     </div>
 
     <h3 class="mt-5 mb-4 fw-bold">Installation Service Process</h3>
+    <img
+      class="w-75"
+      src="@/assets/images/services/installation/process.png"
+      alt=""
+    />
     <ol data-aos="fade-down">
       <li class="text-muted">Onsite Survey</li>
       <li class="text-muted">Discuss to Layout Design & Location</li>
@@ -37,10 +42,10 @@
 
     <!-- 1.33kv installation  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 mt-3 my-4"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/installation/icon.png" alt="" />
+      <!-- <img src="@/assets/images/services/installation/icon.png" alt="" /> -->
       <h4 class="fw-bold">Installation-1. 33 kV Substation</h4>
     </div>
 
@@ -61,10 +66,10 @@
 
     <!-- 2.11kv installation  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 mt-2 mb-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/installation/icon.png" alt="" />
+      <!-- <img src="@/assets/images/services/installation/icon.png" alt="" /> -->
       <h4 class="fw-bold">Installation-2. 11 kV Substation</h4>
     </div>
 
@@ -141,10 +146,10 @@
 
     <!-- 3.11kv installation  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 mt-2 mb-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/installation/icon.png" alt="" />
+      <!-- <img src="@/assets/images/services/installation/icon.png" alt="" /> -->
       <h4 class="fw-bold">Installation-3. 11 kV Substation</h4>
     </div>
 
@@ -160,10 +165,9 @@
 
     <!-- package unit substation  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 mt-2 mb-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/installation/icon.png" alt="" />
       <h4 class="fw-bold">Installation-4. Package Unit Substation</h4>
     </div>
 
@@ -238,10 +242,9 @@
     <hr />
     <!-- two people type  -->
     <div
-      class="exp-head d-flex align-items-center gap-3 my-5"
+      class="exp-head d-flex align-items-center gap-3 mt-2 mb-3"
       data-aos="flip-up"
     >
-      <img src="@/assets/images/services/installation/icon.png" alt="" />
       <h4 class="fw-bold">Installation-5. Two Pole Type Substation</h4>
     </div>
 
@@ -259,65 +262,69 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_people_type/1.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="fade-down-right"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_people_type/2.jpeg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_people_type/3.jpeg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="fade-down-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_people_type/4.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-left"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_people_type/5.jpeg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-right"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
-          :src="
-            require('@/assets/images/services/installation/two_people_type/6.jpg')
-          "
-          alt=""
-          class="w-100 h-100"
-          data-aos="flip-right"
-        />
+      <div class="two-pole-swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_people_type/1.png')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_people_type/2.png')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_people_type/3.png')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_people_type/4.png')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_people_type/5.png')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img
+                :src="
+                  require('@/assets/images/services/installation/two_people_type/6.png')
+                "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -331,6 +338,7 @@ export default {
   setup() {
     const installationSwiper = ref(null);
     const packageSwiper = ref(null);
+    const towPoleSwiper = ref(null);
 
     onMounted(() => {
       installationSwiper.value = new Swiper(".installation-swiper", {
@@ -368,9 +376,27 @@ export default {
           },
         },
       });
+
+      towPoleSwiper.value = new Swiper(".two-pole-swiper", {
+        speed: 1500,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 500,
+        },
+        slidesPerView: 1,
+        breakpoints: {
+          700: {
+            slidesPerView: 2,
+          },
+
+          1100: {
+            slidesPerView: 3,
+          },
+        },
+      });
     });
 
-    return { installationSwiper, packageSwiper };
+    return { installationSwiper, packageSwiper, towPoleSwiper };
   },
 };
 </script>
@@ -396,6 +422,10 @@ export default {
 
 .installation-service .swiper {
   height: 500px;
+}
+
+.installation-service .swiper img {
+  filter: brightness(1);
 }
 
 .installation-service ol li,

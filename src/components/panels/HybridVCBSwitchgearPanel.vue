@@ -1,12 +1,8 @@
 <template>
   <div class="panel-section">
     <h2>12kV Hybrid VCB Switchgear Panel</h2>
-    <div class="img">
-      <img
-        class="hybrid-vcb"
-        src="@/assets/images/panels/hybrid_vcb.png"
-        alt=""
-      />
+    <div class="img hybrid-vcb">
+      <vue-image-zoomer regular="/panels/hybrid_vcb.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

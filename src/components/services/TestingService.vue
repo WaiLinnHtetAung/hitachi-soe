@@ -28,7 +28,7 @@
     >
       Our Experiences
     </h4>
-    <div class="row my-5">
+    <div class="row my-5 experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
           :src="require('@/assets/images/services/testing/1.jpg')"
@@ -125,6 +125,14 @@ export default {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 18px;
+}
+
+.experience img {
+  transition: 0.3s ease;
+}
+
+.experience img:hover {
+  transform: translateY(-15px) translateX(10px) !important;
 }
 
 @media (max-width: 1500px) {
