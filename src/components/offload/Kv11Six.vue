@@ -16,7 +16,7 @@
             <div class="col-12 col-lg-6">
               <div class="row mb-3">
                 <div class="col-8">Rated primary voltage</div>
-                <div class="col-4">:&nbsp; 11000V</div>
+                <div class="col-4">:&nbsp; 11000V ~ 6600 V</div>
               </div>
               <div class="row mb-3 mb-lg-0">
                 <div class="col-8">Rated Secondary voltage</div>
@@ -37,7 +37,7 @@
         </div>
         <div class="col-12 col-md-4 d-flex align-items-center main-bg-color">
           <p class="mt-3 mt-lg-0 px-2 px-lg-0">
-            Open Type With Conservator (Off Load Tap Changer) Silicon
+            Hermetically Sealed Type (Off Load Tap Changer) Silicon
             <span class="text-warning">Steel</span> Core Transformer
           </p>
         </div>
@@ -46,7 +46,7 @@
         <table class="table table-striped table-bordered table-responsive">
           <thead>
             <tr class="text-center">
-              <th>No</th>
+              <th>Sr</th>
               <th>Capacity</th>
               <th>No load losses</th>
               <th rowspan="2">Load losses at 75&deg;C PK (W)</th>
@@ -66,8 +66,8 @@
               <th rowspan="2">Total Weight (kgs)</th>
             </tr>
             <tr>
-              <th>Sr</th>
-              <th>(KVA)</th>
+              <th>No</th>
+              <th>kVA</th>
               <th>Po(W)</th>
               <th>1/2 load %</th>
               <th>Full load %</th>
@@ -88,11 +88,11 @@
               <td>98.18</td>
               <td>97.56</td>
               <td>2.16</td>
-              <td>925</td>
-              <td>580</td>
-              <td>950</td>
-              <td>110</td>
-              <td>425</td>
+              <td>980</td>
+              <td>600</td>
+              <td>1020</td>
+              <td>160</td>
+              <td>530</td>
             </tr>
             <tr>
               <td>2</td>
@@ -105,11 +105,11 @@
               <td>98.57</td>
               <td>98.04</td>
               <td>1.77</td>
-              <td>1035</td>
-              <td>650</td>
-              <td>1060</td>
-              <td>140</td>
-              <td>580</td>
+              <td>1065</td>
+              <td>646</td>
+              <td>1105</td>
+              <td>160</td>
+              <td>630</td>
             </tr>
             <tr>
               <td>3</td>
@@ -122,11 +122,11 @@
               <td>98.78</td>
               <td>98.31</td>
               <td>1.54</td>
-              <td>1150</td>
-              <td>750</td>
-              <td>1080</td>
-              <td>190</td>
-              <td>820</td>
+              <td>1245</td>
+              <td>740</td>
+              <td>1130</td>
+              <td>205</td>
+              <td>840</td>
             </tr>
             <tr>
               <td>4</td>
@@ -139,11 +139,11 @@
               <td>98.80</td>
               <td>98.35</td>
               <td>1.49</td>
-              <td>1255</td>
-              <td>740</td>
-              <td>1090</td>
-              <td>190</td>
-              <td>885</td>
+              <td>1295</td>
+              <td>790</td>
+              <td>1165</td>
+              <td>260</td>
+              <td>990</td>
             </tr>
             <tr>
               <td>5</td>
@@ -156,11 +156,11 @@
               <td>98.85</td>
               <td>98.43</td>
               <td>1.43</td>
-              <td>1360</td>
-              <td>800</td>
-              <td>1070</td>
-              <td>240</td>
-              <td>1000</td>
+              <td>1395</td>
+              <td>860</td>
+              <td>1240</td>
+              <td>280</td>
+              <td>1140</td>
             </tr>
             <tr>
               <td>6</td>
@@ -173,11 +173,11 @@
               <td>98.93</td>
               <td>98.53</td>
               <td>1.34</td>
-              <td>1520</td>
-              <td>930</td>
-              <td>1185</td>
-              <td>290</td>
+              <td>1545</td>
+              <td>980</td>
               <td>1245</td>
+              <td>350</td>
+              <td>1320</td>
             </tr>
             <tr>
               <td>7</td>
@@ -192,9 +192,9 @@
               <td>1.37</td>
               <td>1595</td>
               <td>995</td>
-              <td>1245</td>
-              <td>340</td>
-              <td>1510</td>
+              <td>1270</td>
+              <td>350</td>
+              <td>1540</td>
             </tr>
             <tr>
               <td>8</td>
@@ -207,11 +207,11 @@
               <td>99.05</td>
               <td>98.67</td>
               <td>1.23</td>
-              <td>1665</td>
-              <td>1120</td>
-              <td>1340</td>
-              <td>335</td>
-              <td>1650</td>
+              <td>1710</td>
+              <td>1150</td>
+              <td>1390</td>
+              <td>400</td>
+              <td>1280</td>
             </tr>
             <tr>
               <td>9</td>
@@ -224,11 +224,11 @@
               <td>99.10</td>
               <td>98.73</td>
               <td>1.18</td>
-              <td>1750</td>
-              <td>1165</td>
+              <td>1775</td>
+              <td>1150</td>
               <td>1440</td>
-              <td>470</td>
-              <td>1960</td>
+              <td>460</td>
+              <td>2100</td>
             </tr>
             <tr>
               <td>10</td>
@@ -241,11 +241,11 @@
               <td>99.08</td>
               <td>98.65</td>
               <td>1.32</td>
-              <td>1810</td>
-              <td>1190</td>
-              <td>1460</td>
+              <td>1865</td>
+              <td>1185</td>
+              <td>1420</td>
               <td>520</td>
-              <td>2280</td>
+              <td>2200</td>
             </tr>
             <tr>
               <td>11</td>
@@ -258,11 +258,11 @@
               <td>99.07</td>
               <td>98.62</td>
               <td>1.35</td>
-              <td>1770</td>
-              <td>1170</td>
-              <td>1450</td>
-              <td>565</td>
-              <td>2260</td>
+              <td>1870</td>
+              <td>1200</td>
+              <td>1540</td>
+              <td>600</td>
+              <td>2360</td>
             </tr>
           </tbody>
         </table>
