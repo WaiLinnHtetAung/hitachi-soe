@@ -1,13 +1,21 @@
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .bgg {
-    background-color: #ccc;
+  background-color: #ccc;
+}
+
+.main-color {
+  color: #b1000e;
+}
+
+.main-bg-color {
+  background-color: #b1000e;
 }
 
 #carouselExampleFade,
 .carousel-inner,
 .carousel-item img {
-    z-index: -1 !important;
+  z-index: -1 !important;
 }
