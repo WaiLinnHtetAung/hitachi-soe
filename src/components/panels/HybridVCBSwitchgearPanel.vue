@@ -25,7 +25,12 @@
           <tr data-aos="flip-up">
             <td>Short Time Breaking Current (At 12kV)</td>
             <td class="text-center">kA</td>
-            <td class="text-center" colspan="2">25kA</td>
+            <td class="text-center" colspan="2">25kA-1Sec / 31.5kA-1Sec</td>
+          </tr>
+          <tr data-aos="flip-up">
+            <td>Short Time Making Current (At 12kV)</td>
+            <td class="text-center">kA</td>
+            <td class="text-center" colspan="2">65kA</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Lightning Inpulse Withstand Voltage</td>
@@ -40,7 +45,7 @@
           <tr data-aos="flip-up">
             <td>Control Power Supply</td>
             <td class="text-center">VDC</td>
-            <td class="text-center" colspan="2">110 VDC</td>
+            <td class="text-center" colspan="2">110VDC</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Rated Frequency</td>
@@ -49,12 +54,12 @@
           </tr>
           <tr data-aos="flip-up">
             <td>Operating Sequence</td>
-            <td class="text-center">&nbsp;</td>
+            <td class="text-center">-</td>
             <td class="text-center" colspan="2">0-0.3s-CO-180s-CO</td>
           </tr>
           <tr data-aos="flip-up">
             <td rowspan="3" class="align-middle">Applied Standard</td>
-            <td rowspan="3">&nbsp;</td>
+            <td rowspan="3" class="text-center align-middle">-</td>
             <td>Circuit Breaker</td>
             <td class="text-center">IEC 62271-100</td>
           </tr>
@@ -68,32 +73,32 @@
           </tr>
           <tr data-aos="flip-up">
             <td>Installation</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">Indoor</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Degree of Protection</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">IP 4X</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Max: Ambient Temperature</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">-25°C to +40°C</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Humidity</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">&lt; 95%</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Altitude</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">&lt; 1000m</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Enclosure Material</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">
               Electro Galvanized Iron Steel
             </td>
@@ -101,12 +106,16 @@
           <tr data-aos="flip-up">
             <td>Material Sheet Thickness</td>
             <td class="text-center">mm</td>
-            <td colspan="2" class="text-center">2mm / 2.3mm</td>
+            <td colspan="2" class="text-center">
+              2mm / 2.3mm (Other Thickness Upon Request)
+            </td>
           </tr>
           <tr data-aos="flip-up">
             <td>Coating Colour</td>
-            <td>&nbsp;</td>
-            <td colspan="2" class="text-center">RAL7032</td>
+            <td class="text-center">-</td>
+            <td colspan="2" class="text-center">
+              RAL7032 / RAL7035 (Other Colour Upon Request)
+            </td>
           </tr>
           <tr data-aos="flip-up">
             <td colspan="4">&nbsp;</td>
@@ -116,18 +125,18 @@
           </tr>
           <tr data-aos="flip-up">
             <td>Standards</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">IEC 62271-100</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Type</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">HV-12MAC-630/25 (1250/31)</td>
           </tr>
           <tr data-aos="flip-up">
-            <td>Available Normal Voltage</td>
+            <td>Available Rated Voltage</td>
             <td class="text-center">kV</td>
-            <td colspan="2" class="text-center">11kV / 6.6kV</td>
+            <td colspan="2" class="text-center">6.6kV / 11kV</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Available Rated Current</td>
@@ -135,25 +144,25 @@
             <td colspan="2" class="text-center">630A / 1250A</td>
           </tr>
           <tr data-aos="flip-up">
-            <td>Rated Short Time Withstand Current</td>
+            <td>Short Time Withstand Current</td>
             <td class="text-center">kA</td>
             <td colspan="2" class="text-center">
               25kA -4Sec (630A) / 31.5kA -4Sec (1250A)
             </td>
           </tr>
           <tr data-aos="flip-up">
-            <td>Rated Lightning Inpulse Withstand Voltage</td>
+            <td>Lightning Inpulse Withstand Voltage</td>
             <td class="text-center">kV</td>
             <td colspan="2" class="text-center">75 kV</td>
           </tr>
           <tr data-aos="flip-up">
-            <td>Rated Short Duration Power Frequency Withstand Voltage</td>
+            <td>Power Frequency Withstand Voltage</td>
             <td class="text-center">kV</td>
             <td colspan="2" class="text-center">28 kV</td>
           </tr>
           <tr data-aos="flip-up">
             <td>Operating Sequence</td>
-            <td>&nbsp;</td>
+            <td class="text-center">-</td>
             <td colspan="2" class="text-center">0-0.3s-CO-180s-CO</td>
           </tr>
           <tr data-aos="flip-up">
