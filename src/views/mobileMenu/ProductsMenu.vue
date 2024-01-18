@@ -91,25 +91,30 @@ export default {
 
     let transformers = [
       {
-        img: require("@/assets/images/offload/offload.jpg"),
+        img: require("@/assets/images/transformers/offload/9.jpg"),
         title: "Distribution Transformer with Off Load Tapchanger",
         link: "/products/offload",
       },
       {
-        img: require("@/assets/images/onload/onload.jpg"),
+        img: require("@/assets/images/transformers/onload/12.jpg"),
         title: "Distribution Transformer with On Load Tapchanger",
         link: "/products/onload",
       },
       {
-        img: require("@/assets/images/poweroff/poweroff.jpg"),
+        img: require("@/assets/images/transformers/poweroff/2.jpg"),
         title: "Power Off Load Transformer with On Load Tapchanger",
         link: "/products/powerOffLoad",
       },
 
       {
-        img: require("@/assets/images/poweron/poweron.jpg"),
+        img: require("@/assets/images/transformers/poweron/1.jpg"),
         title: "Power On Load Transformer with On Load Tapchanger",
         link: "/products/powerOnLoad",
+      },
+      {
+        img: require("@/assets/images/transformers/highefficiency/1.jpg"),
+        title: "High Efficient Transformer",
+        link: "/products/highEfficient",
       },
     ];
 

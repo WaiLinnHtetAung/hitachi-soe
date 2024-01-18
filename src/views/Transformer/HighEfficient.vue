@@ -2,10 +2,12 @@
   <div class="offload-section">
     <div class="offload-carousel swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="i in 9" :key="i">
+        <div class="swiper-slide" v-for="i in 2" :key="i">
           <div class="image-container">
             <img
-              :src="require(`@/assets/images/transformers/offload/${i}.jpg`)"
+              :src="
+                require(`@/assets/images/transformers/highefficiency/${i}.jpg`)
+              "
               alt=""
             />
           </div>
@@ -17,36 +19,33 @@
     </div>
     <div class="offload-spec">
       <h2 data-aos="fade-down">
-        DISTRIBUTION TRANSFORMER WITH OFF LOAD TAP CHANGER
+        HIGH EFFICIENT DISTRIBUTION TRANSFORMER WITH OFF LOAD TAP CHANGER
       </h2>
       <div data-aos="fade-up"><Kv11Four></Kv11Four></div>
       <div data-aos="fade-up"><Kv11Four2></Kv11Four2></div>
       <div data-aos="fade-up"><Kv11Six></Kv11Six></div>
-      <div data-aos="fade-up"><Kv11Six2></Kv11Six2></div>
-      <div data-aos="fade-up"><Kv33Four></Kv33Four></div>
-      <div data-aos="fade-up"><Kv33Four2></Kv33Four2></div>
+      <div data-aos="fade-up"><Kv11SixFour></Kv11SixFour></div>
+      <div data-aos="fade-up"><Kv33></Kv33></div>
     </div>
     <div class="free-space">&nbsp;</div>
   </div>
 </template>
 
 <script>
-import Kv33Four2 from "../../components/offload/Kv33Four2";
-import Kv11Four2 from "../../components/offload/Kv11Four2";
-import Kv33Four from "../../components/offload/Kv33Four";
-import Kv11Six from "../../components/offload/Kv11Six";
-import Kv11Six2 from "../../components/offload/Kv11Six2";
-import Kv11Four from "../../components/offload/Kv11Four";
+import Kv33 from "../../components/highefficient/Kv33";
+import Kv11SixFour from "../../components/highefficient/Kv11SixFour";
+import Kv11Six from "../../components/highefficient/Kv11Six";
+import Kv11Four2 from "../../components/highefficient/Kv11Four2";
+import Kv11Four from "../../components/highefficient/Kv11Four";
 import { onMounted, ref } from "vue";
 
 export default {
   components: {
-    Kv11Four2,
-    Kv33Four,
-    Kv33Four2,
+    Kv33,
+    Kv11SixFour,
     Kv11Six,
+    Kv11Four2,
     Kv11Four,
-    Kv11Six2,
   },
   setup() {
     const swiper = ref();

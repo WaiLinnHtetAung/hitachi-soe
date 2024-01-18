@@ -2,34 +2,12 @@
   <div class="poweron-section">
     <div class="poweron-carousel swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" v-for="i in 1" :key="i">
           <div class="image-container">
-            <div class="img text-end">
-              <img
-                src="@/assets/images/poweron/3000kVA(33-11kV)OnLoadTapChanger.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="image-container">
-            <div class="img text-end">
-              <img
-                src="@/assets/images/poweron/20000kVA(66-11kV)OnLoadTapChangerTransformer.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="image-container">
-            <div class="img text-end">
-              <img
-                src="@/assets/images/poweron/30000kVA(66-33kV).OnLoadTapChangerTransformer.png"
-                alt=""
-              />
-            </div>
+            <img
+              :src="require(`@/assets/images/transformers/poweron/${i}.jpg`)"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -39,55 +17,46 @@
     </div>
     <div class="poweron-spec">
       <h2 data-aos="fade-down">Power Transformer (On Load)</h2>
-      <div data-aos="fade-up"><Kv33_11></Kv33_11></div>
-      <div data-aos="fade-up"><Kv66_11></Kv66_11></div>
-      <div data-aos="fade-up"><Kv66_33></Kv66_33></div>
       <div data-aos="fade-up"><Kv33_11_6_6></Kv33_11_6_6></div>
-      <div data-aos="fade-up"><Kv66_11_6_6></Kv66_11_6_6></div>
+      <div data-aos="fade-up"><Kv66_33></Kv66_33></div>
     </div>
     <div class="free-space">&nbsp;</div>
   </div>
 </template>
 
 <script>
-import Kv66_11_6_6 from "../../components/poweronload/Kv66_11_6_6";
 import Kv33_11_6_6 from "../../components/poweronload/Kv33_11_6_6";
 import Kv66_33 from "../../components/poweronload/Kv66_33";
-import Kv66_11 from "../../components/poweronload/Kv66_11";
-import Kv33_11 from "../../components/poweronload/Kv33_11";
 import { onMounted, ref } from "vue";
 // import Swiper from 'swiper/bundle';
 // import 'swiper/css/bundle'
 export default {
   components: {
-    Kv66_11_6_6,
     Kv33_11_6_6,
     Kv66_33,
-    Kv66_11,
-    Kv33_11,
   },
 
   setup() {
     const swiper = ref();
 
     onMounted(() => {
-      // swiper.value = new Swiper('.swiper', {
-      //     speed: 300,
-      //     loop: true,
-      //     autoplay: {
-      //         delay: 5000,
-      //         disableOnInteraction: false
-      //     },
-      //     pagination: {
-      //         el: '.swiper-pagination',
-      //         clickable: true,
-      //         type: 'bullets'
-      //     },
-      //     navigation: {
-      //         nextEl: '.swiper-button-next',
-      //         prevEl: '.swiper-button-prev',
-      //     }
-      // })
+      swiper.value = new Swiper(".swiper", {
+        speed: 300,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          type: "bullets",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     });
 
     return { swiper };
@@ -95,7 +64,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .poweron-section {
   position: relative;
 }
@@ -103,27 +72,22 @@ export default {
   margin: 10px 240px 70px;
 }
 
-.swiper {
-  padding: 40px 0px 10px;
-  height: 680px;
-}
-.swiper-slide .image-container {
+.poweron-carousel .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 90px;
 }
-.swiper-slide .img {
-  width: 600px;
-  height: 600px;
+.poweron-carousel .img {
   display: flex;
   justify-content: center;
 }
 
-.swiper-slide .img img {
-  width: 100%;
+.poweron-carousel img {
+  width: 48%;
   height: 100%;
   object-fit: contain;
+  filter: brightness(1);
 }
 
 .poweron-carousel .swiper-pagination .swiper-pagination-bullet {
@@ -152,7 +116,7 @@ export default {
 }
 
 .poweron-spec {
-  padding: 30px 15.5%;
+  padding: 30px 15%;
   margin-top: 20px;
 }
 
@@ -162,52 +126,34 @@ export default {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1738px) {
+  .poweron-carousel {
+    margin: 10px 180px 70px;
+  }
+  .poweron-spec {
+    padding: 30px 10%;
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 1500px) {
   .poweron-carousel {
-    margin: 10px 200px 70px;
+    margin: 10px 120px 70px;
   }
+}
 
-  .swiper {
-    padding: 40px 0px 10px;
-    height: 490px;
+@media (max-width: 1200px) {
+  .poweron-carousel {
+    margin: 10px 10px 70px;
   }
-  .swiper-slide .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 90px;
-  }
-  .swiper-slide .img {
-    width: 450px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
+  .poweron-spec {
+    padding: 30px 3%;
   }
 }
 
 @media (max-width: 990px) {
   .poweron-carousel {
     margin: 10px 40px 40px;
-  }
-
-  .swiper {
-    padding: 10px 0px 10px;
-    height: 450px;
-  }
-  .swiper-slide .img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .swiper-slide .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .poweron-spec {
-    padding: 30px 5%;
-    margin-top: 20px;
   }
 }
 
@@ -225,21 +171,6 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 70px;
-  }
-  .swiper-slide .img {
-    width: 300px;
-    height: 220px;
-  }
-
-  .swiper-slide .img img {
-    width: 90%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .poweron-spec {
-    padding: 30px 5%;
-    margin-top: 20px;
   }
 
   .poweron-carousel .swiper-pagination .swiper-pagination-bullet {

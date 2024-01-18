@@ -2,7 +2,8 @@
   <div class="kv11">
     <h2>
       <span class="fw-bold"
-        >(33/0.4)kV OFF LOAD TAP CHANGER DISTRIBUTION TRANSFORMER</span
+        >(11-6.6/0.4)kV OFF LOAD TAP CHANGER HIGH EFFICIENT DISTRIBUTION
+        TRANSFORMER</span
       >
       <button @click="showSpec" class="border-0">
         <i
@@ -18,7 +19,7 @@
             <div class="col-12 col-lg-7">
               <div class="row mb-3">
                 <div class="col-8">Rated primary voltage</div>
-                <div class="col-4">:&nbsp; 33000V</div>
+                <div class="col-4">:&nbsp; 11000V ~ 6600 V</div>
               </div>
               <div class="row mb-3 mb-lg-0">
                 <div class="col-8">Rated Secondary voltage</div>
@@ -31,16 +32,17 @@
                 <div class="col-4 col-lg-5">:&nbsp; 50 Hz</div>
               </div>
               <div class="row mb-3 mb-lg-0">
-                <div class="col-8 col-lg-7">Phase</div>
-                <div class="col-4 col-lg-5">:&nbsp; 3 Phases</div>
+                <div class="col-7">Phase</div>
+                <div class="col-5">:&nbsp; 3 Phases</div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4 d-flex align-items-center main-bg-color">
           <p class="mt-3 mt-lg-0 px-2 px-lg-0">
-            Open Type with Conservator (Off Load Tap Changer) Silicon
-            <span class="text-warning">Steel</span> Core Transformer
+            Hermetically Sealed Type (Off Load Tap Changer) Silicon
+            <span class="text-warning">Steel</span> Core High Efficient
+            Transformer
           </p>
         </div>
       </div>
@@ -48,7 +50,7 @@
         <table class="table table-striped table-bordered table-responsive">
           <thead>
             <tr class="text-center">
-              <th>Sr</th>
+              <th>No</th>
               <th>Capacity</th>
               <th>No load losses</th>
               <th rowspan="2">Load losses at 75&deg;C PK (W)</th>
@@ -68,8 +70,8 @@
               <th rowspan="2">Total Weight (kgs)</th>
             </tr>
             <tr>
-              <th>No</th>
-              <th>kVA</th>
+              <th>Sr</th>
+              <th>(KVA)</th>
               <th>Po(W)</th>
               <th>1/2 load %</th>
               <th>Full load %</th>
@@ -81,105 +83,71 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>1000</td>
-              <td>1700</td>
-              <td>11000</td>
-              <td>12700</td>
-              <td>6</td>
-              <td>0.7</td>
-              <td>99.12</td>
-              <td>98.75</td>
-              <td>1.27</td>
-              <td>2570</td>
-              <td>1280</td>
-              <td>2150</td>
-              <td>1065</td>
-              <td>3530</td>
+              <td>50</td>
+              <td>135</td>
+              <td>720</td>
+              <td>855</td>
+              <td>4</td>
+              <td>1.5</td>
+              <td>98.76</td>
+              <td>98.32</td>
+              <td>1.51</td>
+              <td>1010</td>
+              <td>650</td>
+              <td>1155</td>
+              <td>195</td>
+              <td>640</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>1250</td>
-              <td>2000</td>
-              <td>14000</td>
-              <td>16000</td>
-              <td>6</td>
-              <td>0.7</td>
-              <td>99.13</td>
-              <td>98.74</td>
-              <td>1.29</td>
-              <td>2470</td>
-              <td>1310</td>
-              <td>2210</td>
-              <td>1150</td>
-              <td>4060</td>
+              <td>100</td>
+              <td>220</td>
+              <td>1280</td>
+              <td>1500</td>
+              <td>4</td>
+              <td>1.5</td>
+              <td>98.93</td>
+              <td>98.52</td>
+              <td>1.35</td>
+              <td>1050</td>
+              <td>700</td>
+              <td>1270</td>
+              <td>245</td>
+              <td>820</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>1500</td>
+              <td>200</td>
+              <td>400</td>
               <td>2100</td>
-              <td>15000</td>
-              <td>17100</td>
-              <td>6</td>
-              <td>0.6</td>
-              <td>99.23</td>
-              <td>98.87</td>
-              <td>1.18</td>
-              <td>2560</td>
-              <td>1400</td>
-              <td>2330</td>
-              <td>1320</td>
-              <td>4760</td>
+              <td>2500</td>
+              <td>4</td>
+              <td>1.2</td>
+              <td>99.08</td>
+              <td>98.77</td>
+              <td>1.12</td>
+              <td>1240</td>
+              <td>750</td>
+              <td>1330</td>
+              <td>325</td>
+              <td>1200</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>2000</td>
-              <td>2600</td>
-              <td>22000</td>
-              <td>24600</td>
-              <td>6</td>
-              <td>0.6</td>
-              <td>99.20</td>
-              <td>98.78</td>
-              <td>1.10</td>
+              <td>315</td>
+              <td>550</td>
               <td>2850</td>
-              <td>1530</td>
-              <td>2580</td>
-              <td>1950</td>
-              <td>6500</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>2500</td>
-              <td>3000</td>
-              <td>23000</td>
-              <td>26000</td>
-              <td>6</td>
-              <td>0.5</td>
-              <td>99.30</td>
-              <td>98.97</td>
-              <td>1.10</td>
-              <td>2990</td>
-              <td>1580</td>
-              <td>2670</td>
-              <td>2140</td>
-              <td>7700</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>3000</td>
               <td>3400</td>
-              <td>27000</td>
-              <td>30500</td>
-              <td>7</td>
-              <td>0.4</td>
-              <td>99.32</td>
-              <td>98.99</td>
-              <td>1.14</td>
-              <td>3210</td>
-              <td>1650</td>
-              <td>2800</td>
-              <td>2720</td>
-              <td>9050</td>
+              <td>4</td>
+              <td>1</td>
+              <td>99.20</td>
+              <td>98.93</td>
+              <td>0.98</td>
+              <td>1410</td>
+              <td>800</td>
+              <td>1480</td>
+              <td>420</td>
+              <td>1850</td>
             </tr>
           </tbody>
         </table>
@@ -202,5 +170,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

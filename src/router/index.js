@@ -52,6 +52,10 @@ const routes = [
     component: () => import("@/views/Transformer/PowerOn.vue"),
   },
   {
+    path: "/products/highEfficient",
+    component: () => import("@/views/Transformer/HighEfficient.vue"),
+  },
+  {
     path: "/products/panels/:slug",
     name: "Panels",
     component: () => import("@/views/Panel.vue"),

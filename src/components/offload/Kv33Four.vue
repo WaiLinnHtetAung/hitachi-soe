@@ -1,7 +1,9 @@
 <template>
   <div class="kv11">
     <h2>
-      <span>(33/0.4)kV OFF LOAD TAP CHANGER DISTRIBUTION TRANSFORMER</span>
+      <span class="fw-bold"
+        >(33/0.4)kV OFF LOAD TAP CHANGER DISTRIBUTION TRANSFORMER</span
+      >
       <button @click="showSpec" class="border-0">
         <i
           class="fa-solid"
@@ -13,7 +15,7 @@
       <div class="row text-white fw-bold px-3 mb-4">
         <div class="col-12 col-md-8 bg-info py-3 ps-3">
           <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-7">
               <div class="row mb-3">
                 <div class="col-8">Rated primary voltage</div>
                 <div class="col-4">:&nbsp; 33000V</div>
@@ -23,14 +25,14 @@
                 <div class="col-4">:&nbsp; 400/230 V</div>
               </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-5">
               <div class="row mb-3">
-                <div class="col-8">Frequency</div>
-                <div class="col-4">:&nbsp; 50 Hz</div>
+                <div class="col-8 col-lg-7">Frequency</div>
+                <div class="col-4 col-lg-5">:&nbsp; 50 Hz</div>
               </div>
               <div class="row mb-3 mb-lg-0">
-                <div class="col-8">Phase</div>
-                <div class="col-4">:&nbsp; 3 Phases</div>
+                <div class="col-8 col-lg-7">Phase</div>
+                <div class="col-4 col-lg-5">:&nbsp; 3 Phases</div>
               </div>
             </div>
           </div>

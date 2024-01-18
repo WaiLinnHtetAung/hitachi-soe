@@ -183,6 +183,11 @@
                       >Power On Load</router-link
                     >
                   </li>
+                  <li>
+                    <router-link to="/products/highEfficient"
+                      >High Efficient Transformer</router-link
+                    >
+                  </li>
                 </ul>
               </div>
               <div class="panel product">
