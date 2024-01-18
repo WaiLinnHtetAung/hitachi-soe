@@ -65,7 +65,7 @@
           </a>
         </div>
         <div class="top-item">
-          <a class="nav-link nav1-info-container" href="contact.html"
+          <a class="nav-link nav1-info-container" href="#"
             ><img
               class="mail"
               src="@/assets/images/icon_mail.png"

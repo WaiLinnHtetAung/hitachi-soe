@@ -1,9 +1,28 @@
 <template>
   <div class="panel-section">
     <h2>Main Distribution Panel With Capacitor Bank</h2>
-    <div class="img">
-      <vue-image-zoomer regular="/panels/mdb_with_cb.png" />
+    <div class="panel-carousel swiper mb-5">
+      <div class="swiper-wrapper mb-3">
+        <div class="swiper-slide" v-for="i in 3" :key="i">
+          <div class="image-container">
+            <img
+              class="cb"
+              :src="require(`@/assets/images/panel/${i}.png`)"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img :src="require(`@/assets/images/panel/Panel_7.png`)" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination mt-3" id="swiper-paginate"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
+
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">
         <thead class="bg-secondary text-white p-0 m-0">
@@ -188,12 +207,60 @@
   </div>
 </template>
 <script>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 export default {
   setup() {
+    const swiper = ref();
+
     onMounted(() => {
       window.scrollTo(0, 0);
+      swiper.value = new Swiper(".swiper", {
+        speed: 300,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          type: "bullets",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     });
+
+    return { swiper };
   },
 };
 </script>
+<style scoped>
+.panel-carousel img {
+  filter: brightness(1);
+  width: 40%;
+}
+
+.panel-carousel img.cb {
+  filter: brightness(1.3);
+}
+
+.panel-carousel .image-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .panel-carousel img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .panel-carousel img {
+    width: 60%;
+  }
+}
+</style>

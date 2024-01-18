@@ -8,9 +8,10 @@
     <div class="certificates d-flex gap-2">
       <div class="certificate-card">
         <img
-          src="@/assets/images/certificates/14001-2015.jpg"
+          src="@/assets/images/certificates/14001.jpg"
           alt=""
           data-aos="fade-right"
+          class="shadow"
         />
 
         <!-- ---------for mobile ---------  -->
@@ -74,7 +75,7 @@
       </div>
       <div class="certificate-card">
         <img
-          src="@/assets/images/certificates/9001-2015.jpg"
+          src="@/assets/images/certificates/9001.jpg"
           alt=""
           data-aos="fade-right"
         />

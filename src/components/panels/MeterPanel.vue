@@ -1,8 +1,9 @@
 <template>
   <div class="panel-section">
     <h2>kWh Meter Panel</h2>
+
     <div class="img">
-      <img src="/panels/meter_panel.png" alt="" />
+      <vue-image-zoomer regular="/panels/meter_panel.png" />
     </div>
     <div class="specification mt-5 table-responsive">
       <table class="table table-bordered table-striped">

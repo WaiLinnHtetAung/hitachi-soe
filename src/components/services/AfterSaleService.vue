@@ -20,10 +20,10 @@
     </div>
 
     <h3 class="mt-5 mb-4 fw-bold">After Sale Service Process</h3>
-    <ol data-aos="fade-down">
-      <li class="text-muted">Survey (Online/Onsite)</li>
-      <li class="text-muted">Submit Quotation</li>
-    </ol>
+    <br />
+    <div class="d-flex justify-content-center service-process">
+      <img src="@/assets/images/services/process.png" alt="" />
+    </div>
     <br />
 
     <h4
@@ -222,14 +222,6 @@
     <div class="my-5 row experience">
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <img
-          :src="require('@/assets/images/services/aftersale/afs411/1.jpg')"
-          alt=""
-          class="w-100 h-100 mb-3"
-          data-aos="fade-down-right"
-        />
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <img
           :src="require('@/assets/images/services/aftersale/afs411/2.jpg')"
           alt=""
           class="w-100 h-100 mb-3"
@@ -290,6 +282,10 @@ export default {
   bottom: -10px;
 }
 
+.service-process img {
+  width: 50%;
+}
+
 .aftersale-service .swiper {
   height: 500px;
 }
@@ -332,6 +328,10 @@ export default {
     font-weight: bold;
     margin-bottom: 18px;
   }
+
+  .service-process img {
+    width: 60%;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -354,9 +354,19 @@ export default {
   }
 }
 
+@media (max-width: 770px) {
+  .service-process img {
+    width: 70%;
+  }
+}
+
 @media (max-width: 580px) {
   .aftersale-service .swiper {
     height: 400px;
+  }
+
+  .service-process img {
+    width: 90%;
   }
 }
 

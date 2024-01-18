@@ -21,10 +21,10 @@
 
     <div class="my-5">
       <h3 class="mt-5 mb-4 fw-bold">Preventice Maintenance Service Process</h3>
-      <ol>
-        <li class="text-muted">Survey (Online/Onsite)</li>
-        <li class="text-muted">Submit Quotation</li>
-      </ol>
+      <br />
+      <div class="d-flex justify-content-center service-process">
+        <img src="@/assets/images/services/process.png" alt="" />
+      </div>
     </div>
 
     <div class="my-5">
@@ -476,6 +476,10 @@ export default {
   font-size: 18px;
 }
 
+.service-process img {
+  width: 50%;
+}
+
 .experience img {
   transition: 0.3s ease;
 }
@@ -505,6 +509,10 @@ export default {
   .preventice-service ul li {
     font-size: 19px;
   }
+
+  .service-process img {
+    width: 60%;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -527,9 +535,18 @@ export default {
   }
 }
 
+@media (max-width: 770px) {
+  .service-process img {
+    width: 70%;
+  }
+}
+
 @media (max-width: 580px) {
   .preventice-service .swiper {
     height: 400px;
+  }
+  .service-process img {
+    width: 90%;
   }
 }
 

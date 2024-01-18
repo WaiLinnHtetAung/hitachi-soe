@@ -19,17 +19,12 @@
       </ul>
     </div>
 
-    <h3 class="mt-5 mb-4 fw-bold">Installation Service Process</h3>
-    <img
-      class="w-75"
-      src="@/assets/images/services/installation/process.png"
-      alt=""
-    />
-    <ol data-aos="fade-down">
-      <li class="text-muted">Onsite Survey</li>
-      <li class="text-muted">Discuss to Layout Design & Location</li>
-      <li class="text-muted">Submit Quotation</li>
-    </ol>
+    <h3 class="mt-5 fw-bold">Installation Service Process</h3>
+    <br />
+    <div class="d-flex justify-content-center service-process">
+      <img src="@/assets/images/services/installation/process.png" alt="" />
+    </div>
+
     <br />
 
     <h4
@@ -435,6 +430,10 @@ export default {
   margin-bottom: 18px;
 }
 
+.service-process img {
+  width: 70%;
+}
+
 @media (max-width: 1500px) {
   .installation-service {
     padding: 0px 13%;
@@ -478,17 +477,29 @@ export default {
   .installation-service .row div {
     font-size: 17px !important;
   }
+
+  .service-process img {
+    width: 80%;
+  }
 }
 
 @media (max-width: 580px) {
   .installation-service .swiper {
     height: 400px;
   }
+
+  .service-process img {
+    width: 90%;
+  }
 }
 
 @media (max-width: 490px) {
   .installation-service .swiper {
     height: 350px;
+  }
+
+  .service-process img {
+    width: 100%;
   }
 }
 </style>
